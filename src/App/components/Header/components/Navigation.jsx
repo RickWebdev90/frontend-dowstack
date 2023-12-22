@@ -1,11 +1,8 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
 
-export default function Footer() {
-  return (
-    <div>
-      <h1>Footer</h1>
-      <nav>
+export default function Navigation(){
+    return (
+        <nav>
         <ul>
             <NavLink to="/" style={({isActive})=>({color: isActive ? "red" : "blue"})}>
                 <li>Hompage</li>
@@ -33,6 +30,5 @@ export default function Footer() {
             </NavLink>
         </ul>
     </nav>
-    </div>
-  );
+    )
 }

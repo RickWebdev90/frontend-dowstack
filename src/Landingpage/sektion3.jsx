@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function sektion3() {
+export default function Sektion3() {
   return (
     <div>
       <h1>Sektion 3</h1>
