@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
 import headerLogo from "/Users/ricklochner/Coding Projekte/Dowstack/frontend-dowstack/src/App/assets/logo/DowStack_Logo_Color.svg"
 
 export default function Navigation(){
@@ -21,16 +21,11 @@ export default function Navigation(){
             <NavLink to="/portfolio" style={({isActive})=>({color: isActive ? "red" : "black"})}>
                 <li className="nav-header-item">Portfolio</li>
             </NavLink>
-            <NavLink to="/login" style={({isActive})=>({color: isActive ? "red" : "black"})}>
-                <li className="nav-header-item">Login</li>
-            </NavLink>
             <NavLink to="/usersettings" style={({isActive})=>({color: isActive ? "red" : "black"})}>
                 <li className="nav-header-item">UserSettings</li>
             </NavLink>
-            <NavLink to="/registration" style={({isActive})=>({color: isActive ? "red" : "black"})}>
-                <li className="nav-header-item">Registration</li>
-            </NavLink>
         </ul>
+    <button><Link to="/login">Login</Link></button>
     </nav>
     )
 }

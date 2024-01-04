@@ -43,6 +43,23 @@ ul {
     margin: auto;
 }
 
+.header-navbar button{
+    border-radius: 10px;
+    height: 3rem;
+    width: 6rem;
+    margin-left: -65rem;
+    margin-right: 3rem; 
+    font-size: 1.2rem;
+    background: red;
+    color: white;
+    border: none;
+}
+
+a:link, a:visited{
+    text-decoration: none;
+    color: white;
+}
+
 .nav-header-links {
     list-style: none;
     display: flex;
@@ -57,4 +74,8 @@ ul {
 .headerLogo {
     max-width: 100px;
     padding-left: 12rem;
+}
+
+.login-button{
+    border-radius: 20px;
 }
