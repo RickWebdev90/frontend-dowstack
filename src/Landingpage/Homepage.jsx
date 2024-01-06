@@ -14,9 +14,6 @@ export default function Homepage() {
       <Title />
       <Sektion1/>
       <Sektion2/>
-      <Sektion3/>
-      <Sektion4/>
-      <Sektion5/>
       <Registration/>
       <TeamSektion/>
     </div>
