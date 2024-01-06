@@ -1,0 +1,102 @@
+.funktionen {
+    background-color: #267BC6;
+    padding-bottom: 3rem;
+    padding-left: 30rem;
+    padding-right: 30rem;
+}
+
+.funktionen-titel{
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.funktionen-text{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.funktionen-cardcontainer{
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px; 
+    
+}
+
+.funktionen-card1{
+   max-width: 300px;
+   border-right: 2px solid #267BC6;
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 10px; 
+}
+
+.funktionen-card1-img img{
+    max-width: 10rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-items: center;
+}
+
+.funktionen-card1-titel{
+    color: #267BC6
+}
+
+.funktionen-card1-text{
+    color: #267BC6;
+    padding-right: 1rem;
+}
+.funktionen-card2{
+    max-width: 200px;
+    border-right: 2px solid #267BC6;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; 
+ }
+ 
+ .funktionen-card2-img img{
+     max-width: 10rem;
+     padding-top: 1rem;
+     display: flex;
+     justify-items: center;
+ }
+ 
+ .funktionen-card2-titel{
+     color: #267BC6
+ }
+ 
+ .funktionen-card2-text{
+     color: #267BC6; 
+     padding-right: 1rem;
+ }
+
+ .funktionen-card3{
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+ }
+ 
+ .funktionen-card3-img img{
+     max-width: 10rem;
+     padding-top: 1rem;
+     display: flex;
+     justify-items: center;
+ }
+ 
+ .funktionen-card3-titel{
+     color: #267BC6
+ }
+ 
+ .funktionen-card3-text{
+     color: #267BC6
+ }
+ 
+ 
