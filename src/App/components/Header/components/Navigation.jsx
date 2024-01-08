@@ -6,22 +6,22 @@ export default function Navigation(){
         <nav className="header-navbar">
             <img src={headerLogo} alt="logo" className="headerLogo"/>
         <ul className="nav-header-links">
-            <NavLink to="/" style={({isActive})=>({color: isActive ? "red" : "black"})}>
+            <NavLink to="/" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">Hompage</li>
                 </NavLink>
-            <NavLink to="/dashboard" style={({isActive})=>({color: isActive ? "red" : "black"})}>
+            <NavLink to="/dashboard" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">Dashboard</li>
             </NavLink>
-            <NavLink to="/cashflow" style={({isActive})=>({color: isActive ? "red" : "black"})}>
+            <NavLink to="/cashflow" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">Cashflow</li>
             </NavLink>
-            <NavLink to="/savinggoals" style={({isActive})=>({color: isActive ? "red" : "black"})}>
+            <NavLink to="/savinggoals" style={({isActive})=>({color: isActive ? "#6EB636": "black"})}>
                 <li className="nav-header-item">Sparziele</li>
             </NavLink>
-            <NavLink to="/portfolio" style={({isActive})=>({color: isActive ? "red" : "black"})}>
+            <NavLink to="/portfolio" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">Portfolio</li>
             </NavLink>
-            <NavLink to="/usersettings" style={({isActive})=>({color: isActive ? "red" : "black"})}>
+            <NavLink to="/usersettings" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">UserSettings</li>
             </NavLink>
         </ul>

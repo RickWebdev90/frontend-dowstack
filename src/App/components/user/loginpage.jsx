@@ -11,7 +11,8 @@ export default function Loginpage() {
   return (
     <div className='container'>
       <div className="header">
-        <div className="text">{action}</div>
+        <div className={action==="Login"?"gray":"text underline"} onClick={()=>{setAction("Absenden")}}>Registration</div>
+        <div className={action==="Absenden"?"gray":"text underline"} onClick={()=>{setAction("Login")}}>Login</div>
       </div>
       <div className="inputs">
         {action==="Login"?<div></div>:<div className="input">
@@ -27,8 +28,7 @@ export default function Loginpage() {
           <input type="password" placeholder='Passwort'/>
         </div>
         <div className="submit-container">
-          <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Registration")}}>Registration</div>
-          <div className={action==="Registration"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</div>
+          <div className={action==="Registration"?"submit gray":"submit"}>{action}</div>
         </div>
       </div>
     </div>

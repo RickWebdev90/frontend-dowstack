@@ -12,7 +12,6 @@ export default function Homepage() {
   return (
     <div>
       <Title />
-      <Sektion1/>
       <Sektion2/>
       <Registration/>
       <TeamSektion/>
