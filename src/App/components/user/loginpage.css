@@ -95,3 +95,36 @@
     cursor: pointer;
 }
 
+.userSubmit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: white;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.change{
+    background: #6EB636;
+}
+
+.change:hover{
+    background: #4f8228;
+}
+
+.save{
+    background: #FF3F49;
+}
+
+.save:hover{
+    background: #a71920;
+}
+
+.usersettings-title{
+    display: flex;
+    justify-content: center;
+}

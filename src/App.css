@@ -42,12 +42,15 @@ ul {
     align-items: center;
     margin: auto;
     background-color: white;
+    
 }
 
 .header-navbar button{
+    position: absolute;
     border-radius: 10px;
     height: 3rem;
     width: 6rem;
+    position: relative;
     margin-left: -65rem;
     margin-right: 3rem; 
     font-size: 1.2rem;
