@@ -117,14 +117,80 @@
 }
 
 .save{
-    background: #FF3F49;
+    background: #267BC6;
 }
 
 .save:hover{
-    background: #a71920;
+    background: #2066a3;
+}
+
+.delete{
+    background: red;
+}
+
+.delete:hover{
+    background: rgb(162, 3, 3);
 }
 
 .usersettings-title{
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
+}
+
+.input-label{
+    font-size: x-large;
+}
+
+.inputSettings{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    border-radius: 6px;
+}
+
+.inputSettings input{
+    height: 50px;
+    width: 400px;
+    background: transparent; 
+    border-radius: 20px;
+    border: 1px solid gray;
+    outline: none; 
+    color: #797979;
+    font-size: 19px;
+}
+
+.inputGray{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 480px;
+    height: 80px;
+    border-radius: 6px;
+}
+
+.inputGray input{
+    height: 50px;
+    width: 400px;
+    background: rgb(209, 204, 204); 
+    border-radius: 20px;
+    border: 1px solid gray;
+    outline: none; 
+    color: black;
+    font-size: 19px;
+}
+
+.delete-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-top:-2rem;
+}
+
+.usersettings-title{
+    margin-top: -0.5rem;
 }
