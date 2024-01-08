@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import footerLogo from "/Users/ricklochner/Coding Projekte/Dowstack/frontend-dowstack/src/App/assets/logo/DowStack_Logo_Black.svg"
+import footerLogo from "../../../App/assets/logo/DowStack_Logo_Black.svg"
 import "../../../App.css"
 
 export default function Footer() {
