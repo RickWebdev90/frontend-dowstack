@@ -27,7 +27,7 @@ export default function Registration() {
           <input type="password" placeholder='Passwort'/>
         </div>
         <div className="submit-container">
-          <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Registration")}}>Registration</div>
+          <div className={action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Registration")}}>Absenden</div>
         </div>
       </div>
     </div>

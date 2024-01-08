@@ -41,6 +41,7 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    background-color: white;
 }
 
 .header-navbar button{
@@ -50,7 +51,7 @@ ul {
     margin-left: -65rem;
     margin-right: 3rem; 
     font-size: 1.2rem;
-    background: red;
+    background: #267bc6;
     color: white;
     border: none;
 }

@@ -98,5 +98,42 @@
  .funktionen-card3-text{
      color: #267BC6
  }
- 
+
+ .title-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    width: 100%;
+    background-color: #2f1d58;
+    height: 60vh;
+    overflow: auto;
+    flex-direction: row;
+ }
+
+ .title-logo img{
+    height: 100px;
+    margin-left: 2rem; 
+    margin-right: 5rem;
+ }
+
+ .title-subcontainer{
+    width: 80%;
+    height: 50%;
+    margin: 100px;
+    background-color: black;
+    opacity: 0.7;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    border-radius: 25px;
+ }
+
+ .title-subcontainer h1{
+    color: white; 
+ }
  
