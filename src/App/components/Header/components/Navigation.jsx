@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom"
-import headerLogo from "/Users/ricklochner/Coding Projekte/Dowstack/frontend-dowstack/src/App/assets/logo/DowStack_Logo_Color.svg"
+import headerLogo from "../../../assets/logo/DowStack_Logo_Color.svg"
 
 export default function Navigation(){
     return (
@@ -22,7 +22,7 @@ export default function Navigation(){
                 <li className="nav-header-item">Portfolio</li>
             </NavLink>
             <NavLink to="/usersettings" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
-                <li className="nav-header-item">UserSettings</li>
+                <li className="nav-header-item">UserSetting</li>
             </NavLink>
         </ul>
     <button><Link to="/login">Login</Link></button>
