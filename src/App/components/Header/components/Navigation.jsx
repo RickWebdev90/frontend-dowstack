@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom"
-import headerLogo from "/Users/ricklochner/Coding Projekte/Dowstack/frontend-dowstack/src/App/assets/logo/DowStack_Logo_Color.svg"
+import headerLogo from "../../../assets/logo/DowStack_Logo_Color.svg"
 
 export default function Navigation(){
     return (
