@@ -1,8 +1,16 @@
+.font-link{
+    font-family: "Montserrat", sans-serif;
+}
+
 html, body {
     margin: 0;
     padding: 0;
     top: 0;
     left: 0;
+}
+
+h1, h2, h3, h4, h5, p, label, button, ul, input {
+    font-family: "Montserrat", sans-serif;
 }
 
 ul {
@@ -16,12 +24,14 @@ ul {
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    font-family: "Montserrat", sans-serif;
 }
 
 .nav-footer-links {
     list-style: none;
     display: flex;
     padding-right: 12rem;
+    
 }
 
 .nav-footer-item {
@@ -42,7 +52,7 @@ ul {
     align-items: center;
     margin: auto;
     background-color: white;
-    
+    font-family: "Montserrat", sans-serif;
 }
 
 .header-navbar button{
@@ -57,6 +67,7 @@ ul {
     background: #267bc6;
     color: white;
     border: none;
+    font-family: "Montserrat", sans-serif;
 }
 
 a:link, a:visited{
