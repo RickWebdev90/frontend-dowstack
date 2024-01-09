@@ -1,14 +1,9 @@
 import { NavLink, Link } from "react-router-dom"
-import headerLogo from "../../../assets/logo/DowStack_Logo_Color.svg"
 
-export default function Navigation(){
+
+export default function UserNavigation(){
     return (
-        <nav className="header-navbar">
-            <img src={headerLogo} alt="logo" className="headerLogo"/>
-        <ul className="nav-header-links">
-            <NavLink to="/" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
-                <li className="nav-header-item">Hompage</li>
-                </NavLink>
+            <>
             <NavLink to="/dashboard" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">Dashboard</li>
             </NavLink>
@@ -22,10 +17,8 @@ export default function Navigation(){
                 <li className="nav-header-item">Portfolio</li>
             </NavLink>
             <NavLink to="/usersettings" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
-                <li className="nav-header-item">UserSetting</li>
+                <li className="nav-header-item">UserSettings</li>
             </NavLink>
-        </ul>
-    <button><Link to="/login">Login</Link></button>
-    </nav>
-    )
+            </>   
+     )
 }

@@ -30,12 +30,11 @@ ul {
 .nav-footer-links {
     list-style: none;
     display: flex;
-    padding-right: 12rem;
-    
+    padding-right: 2rem;
+    justify-content: flex-end;
 }
 
 .nav-footer-item {
-    display: inline-block;
     padding: 1rem 1rem;
 }
 
@@ -46,28 +45,23 @@ ul {
 
 .header-navbar {
     box-shadow: 0px 2px 5px grey;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: auto;
     background-color: white;
     font-family: "Montserrat", sans-serif;
 }
 
 .header-navbar button{
-    position: absolute;
     border-radius: 10px;
     height: 3rem;
     width: 6rem;
-    position: relative;
-    margin-left: -65rem;
-    margin-right: 3rem; 
     font-size: 1.2rem;
     background: #267bc6;
     color: white;
     border: none;
     font-family: "Montserrat", sans-serif;
+    margin-right: 2rem;
 }
 
 a:link, a:visited{
@@ -78,19 +72,16 @@ a:link, a:visited{
 .nav-header-links {
     list-style: none;
     display: flex;
-    padding-right: 12rem;
+    justify-content: flex-end;
+    margin-left: 30rem; 
 }
 
 .nav-header-item {
-    display: inline-block;
     padding: 1rem 1rem;
+    margin-right: 15px;
 }
 
 .headerLogo {
     max-width: 100px;
     padding-left: 12rem;
-}
-
-.login-button{
-    border-radius: 20px;
 }
