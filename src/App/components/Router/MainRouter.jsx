@@ -10,6 +10,7 @@ import Loginpage from '../user/loginpage'
 import Registration from '../../../Landingpage/Registration/Registration'
 import Usersettings from '../User/usersettings'
 import NotFoundPage from '../NotFoundPage'
+import PopupDelete from '../User/popupDelete'
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +23,7 @@ export const router = createBrowserRouter(
         <Route path="login" element={<Loginpage/>}/>
         <Route path="registration" element={<Registration/>}/>
         <Route path="usersettings" element={<Usersettings/>}/>
+        <Route path="usersettings/delete" element={<PopupDelete />}/>
         <Route path="*" element={<NotFoundPage/>}/>
       </Route>
   )

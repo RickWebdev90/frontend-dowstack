@@ -194,3 +194,39 @@
 .usersettings-title{
     margin-top: -0.5rem;
 }
+
+popup Bereich
+
+.delete-modal {
+    background: white;
+    border: 2px solid black;
+  }
+.content{
+    text-align: center;
+}
+.actions{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+  .delete-modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #cfcece;
+  }
+
+  .delete-modal-container{
+    border: 1px solid black;
+    border-radius: 25px; 
+    background-color: white;
+    width: 600px;
+  }
