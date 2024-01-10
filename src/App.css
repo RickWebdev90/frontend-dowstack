@@ -85,3 +85,44 @@ a:link, a:visited{
     max-width: 100px;
     padding-left: 12rem;
 }
+
+.cashflow-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cashflow-monatsauswahl{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    border: 2px solid green;
+    gap: 10px; 
+}
+
+.cashflow-monatsauswahl button{
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-top: 15px;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.cashflow-title{
+    justify-content: flex-start;
+}
+
+.cashflow-monat{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(224, 221, 221);
+}

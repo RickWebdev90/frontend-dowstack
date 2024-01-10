@@ -1,19 +1,22 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import user_icon from "../../../src/app/assets/login/person.png"
 import email_icon from "../../../src/app/assets/login/email.png"
 import password_icon from "../../../src/app/assets/login/password.png"
 import "./registration.css"
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 
 export default function Registration() {
 
+  const [succesMsg, setSuccessMsg] = useState(false)
+  const [process, setProcess] = useState()
   const usernameRef = useRef()
   const emailRef = useRef()
   const passwordRef = useRef()
+  const navigate = useNavigate()
 
   async function handleRegister(e) {
       e.preventDefault()
-
+      setProcess(true)
       const newUser = {
         username: usernameRef.current.value,
         email: emailRef.current.value, 
@@ -30,13 +33,18 @@ export default function Registration() {
           
       }
       try{
-        const data = await fetch("https://dowstack.onrender.com/register", config)
+        const response = await fetch("https://dowstack.onrender.com/register", config)
+        const data = await response.json() 
+        if(data.resCode === 0){
+          setSuccessMsg(true)
+          navigate("/login")
+        }else if(data.resCode === 1){
+        console.log("rescode duplicate")
+        }
         console.log("data submitted", data)
 
       }catch(err){
-
         console.log("registration failed", err)
-
       }
   }
 
@@ -59,7 +67,8 @@ export default function Registration() {
           <input type="password" placeholder='Passwort' name="password" ref={passwordRef}/>
         </div>
         <div className="submit-container">
-          <button type='submit'className='submit'>Absenden</button>
+          <button type='submit'className='submit'>{process === true ? "Process":"Absenden"}</button>
+          {succesMsg && <h4>user succesfull registered</h4>}
         </div>
       </form>
     </div>
