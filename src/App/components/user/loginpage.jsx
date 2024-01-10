@@ -1,55 +1,49 @@
-import React, { useState, useRef } from 'react'
-import axios from "axios"
-import user_icon from "../../assets/login/person.png"
-import email_icon from "../../assets/login/email.png"
-import password_icon from "../../assets/login/password.png"
-import "./loginpage.css"
-import { Navigate, useNavigate } from 'react-router-dom'
+import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from "../../hooks/userContext.jsx";
 
 export default function Loginpage() {
+  const [successMsg, setSuccessMsg] = useState();
+  const [process, setProcess] = useState();
+  const emailRef = useRef();
+  const passwordRef = useRef();
+  const navigate = useNavigate();
+  const { updateUser } = useUserContext();
 
-  const [succesMsg, setSuccessMsg] = useState()
-  const [process, setProcess] = useState()
-  const emailRef = useRef()
-  const passwordRef = useRef()
-  const navigate = useNavigate()
-  
-  function handleChange(){
-
-    const data = {email: emailRef.current.value, password: passwordRef.current.value}
-    sessionStorage.setItem("autosave", JSON.stringify(data))
+  function handleChange() {
+    const data = { email: emailRef.current.value, password: passwordRef.current.value };
+    sessionStorage.setItem("autosave", JSON.stringify(data));
   }
 
-  async function handleSubmit(e){
-    e.preventDefault()
-    console.log("submit ")
-    setProcess(true)
+  async function handleSubmit(e) {
+    e.preventDefault();
+    setProcess(true);
     const userLogin = {
       email: emailRef.current.value,
-      password: passwordRef.current.value
-    }
+      password: passwordRef.current.value,
+    };
 
-    const config ={
+    const config = {
       method: "POST",
-      headers:{
-        "Content-Type": "application/json"
+      headers: {
+        "Content-Type": "application/json",
       },
-      body:JSON.stringify(userLogin)
-    }
+      body: JSON.stringify(userLogin),
+    };
 
-    try{
-      const response = await fetch("https://dowstack.onrender.com/login", config)
-      const data = await response.json()
-      if(data.resCode === 0){
-        setSuccessMsg(true)
-        navigate("/dashboard")
-      }else if(data.resCode === 1){
-      console.log("user not found")
+    try {
+      const response = await fetch("https://dowstack.onrender.com/login", config);
+      const data = await response.json();
+      if (data.resCode === 0) {
+        setSuccessMsg(true);
+        updateUser(data.userId);
+        navigate("/dashboard");
+      } else if (data.resCode === 1) {
+        console.log("user not found");
       }
-      console.log("loggin success", data)
-
-    }catch(err){
-      console.log("login failed", err)
+      console.log("login success", data);
+    } catch (err) {
+      console.log("login failed", err);
     }
   }
 
@@ -59,21 +53,19 @@ export default function Loginpage() {
         <div className="text underline">Login</div>
       </div>
       <form onSubmit={handleSubmit}>
-      <div className="inputs">
-        <div className="input">
-          <img src={email_icon} alt="" />
-          <input type="email" placeholder='E-Mailadresse' name="email" ref={emailRef} onChange={handleChange}/>
+        <div className="inputs">
+          <div className="input">
+            <input type="email" placeholder='E-Mailadresse' name="email" ref={emailRef} onChange={handleChange} />
+          </div>
+          <div className="input">
+            <input type="password" placeholder='Passwort' name="password" ref={passwordRef} onChange={handleChange} />
+          </div>
+          <div className="submit-container">
+            <button type="submit" className="submit">{process === true ? "Process" : "Log In"}</button>
+            {successMsg && <h4>User Logged In</h4>}
+          </div>
         </div>
-        <div className="input">
-          <img src={password_icon} alt="" />
-          <input type="password" placeholder='Passwort' name="password" ref={passwordRef} onChange={handleChange}/>
-        </div>
-        <div className="submit-container">
-          <button  type="submit" className="submit">{process === true ? "Process":"Log In"}</button>
-          {succesMsg && <h4>User Logged In</h4>}
-        </div>
-        </div>
-        </form>
-      </div>
-  )
+      </form>
+    </div>
+  );
 }
