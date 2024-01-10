@@ -3,6 +3,7 @@ import user_icon from "../../../src/app/assets/login/person.png"
 import email_icon from "../../../src/app/assets/login/email.png"
 import password_icon from "../../../src/app/assets/login/password.png"
 import "./registration.css"
+import { Navigate } from 'react-router-dom'
 
 export default function Registration() {
 
