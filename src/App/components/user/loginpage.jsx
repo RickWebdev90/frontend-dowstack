@@ -8,8 +8,11 @@ import { Navigate, useNavigate } from 'react-router-dom'
 
 export default function Loginpage() {
 
+  const [succesMsg, setSuccessMsg] = useState()
+  const [process, setProcess] = useState()
   const emailRef = useRef()
   const passwordRef = useRef()
+  const navigate = useNavigate()
   
   function handleChange(){
 
@@ -20,7 +23,7 @@ export default function Loginpage() {
   async function handleSubmit(e){
     e.preventDefault()
     console.log("submit ")
-
+    setProcess(true)
     const userLogin = {
       email: emailRef.current.value,
       password: passwordRef.current.value
@@ -35,11 +38,17 @@ export default function Loginpage() {
     }
 
     try{
-      const data = await fetch("https://dowstack.onrender.com/login", config)
+      const response = await fetch("https://dowstack.onrender.com/login", config)
+      const data = await response.json()
+      if(data.resCode === 0){
+        setSuccessMsg(true)
+        navigate("/dashboard")
+      }else if(data.resCode === 1){
+      console.log("user not found")
+      }
       console.log("loggin success", data)
 
     }catch(err){
-
       console.log("login failed", err)
     }
   }
@@ -60,7 +69,8 @@ export default function Loginpage() {
           <input type="password" placeholder='Passwort' name="password" ref={passwordRef} onChange={handleChange}/>
         </div>
         <div className="submit-container">
-          <button  type="submit" className="submit">Log In</button>
+          <button  type="submit" className="submit">{process === true ? "Process":"Log In"}</button>
+          {succesMsg && <h4>User Logged In</h4>}
         </div>
         </div>
         </form>

@@ -1,9 +1,13 @@
 import React from 'react'
+import Monatsauswahl from './monatsauswahl'
+
 
 export default function Cashflow() {
   return (
-    <div>
-        <h1>Cashflow</h1>
+    <div className='cashflow-header'>
+      <div className="cashflow-title"><h1>Dein Cashflow</h1></div>
+      <Monatsauswahl />
+      <div></div>
     </div>
   )
 }
