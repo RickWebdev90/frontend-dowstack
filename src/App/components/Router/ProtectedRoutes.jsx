@@ -1,11 +1,10 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
-import { useUserContext } from '../../hooks/userContext.jsx';
 
 export default function ProtectedRoutes() {
-  const { user } = useUserContext();
+  const auth = sessionStorage.getItem("userid")
 
-  if (user === null) {
+  if (auth === null) {
     return <Navigate to="/login" />;
   }
 

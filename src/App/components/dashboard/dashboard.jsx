@@ -2,12 +2,12 @@ import React from 'react';
 import { useUserContext } from '../../hooks/userContext';
 
 export default function Dashboard() {
-  const { user } = useUserContext();
-  console.log("userid:",user)
+  const auth = sessionStorage.getItem("userid")
+  console.log("userid:",auth)
   return (
     <div>
       <h1>Dashboard</h1>
-      {user && <p>User ID: {user._id}</p>}
+      {auth && <p>User ID: {auth}</p>}
     </div>
   );
 }
