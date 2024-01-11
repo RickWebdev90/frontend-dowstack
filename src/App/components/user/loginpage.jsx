@@ -41,7 +41,7 @@ export default function Loginpage() {
         navigate("/dashboard");
 
         const auth = data._id;
-    sessionStorage.setItem("userid", JSON.stringify(auth))
+    sessionStorage.setItem("userid", auth)
         
 
       } else if (data.resCode === 1) {
