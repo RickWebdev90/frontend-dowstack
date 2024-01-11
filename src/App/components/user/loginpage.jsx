@@ -8,7 +8,7 @@ export default function Loginpage() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-  const { updateUser } = useUserContext();
+  const { setUser } = useUserContext();
 
   function handleChange() {
     const data = { email: emailRef.current.value, password: passwordRef.current.value };
@@ -35,15 +35,18 @@ export default function Loginpage() {
       const response = await fetch("https://dowstack.onrender.com/login", config);
       const data = await response.json();
       if (data.resCode === 0) {
+        console.log("Login erfolgreich. Benutzer-ID:", data._id);
         setSuccessMsg(true);
-        updateUser(data.userId);
+        setUser(data._id);
         navigate("/dashboard");
       } else if (data.resCode === 1) {
-        console.log("user not found");
+        console.log("Benutzer nicht gefunden");
+        setUser(null);
       }
-      console.log("login success", data);
+      console.log("Login erfolgreich", data);
     } catch (err) {
-      console.log("login failed", err);
+      console.log("Login fehlgeschlagen", err);
+      setUser(null);
     }
   }
 
@@ -61,8 +64,8 @@ export default function Loginpage() {
             <input type="password" placeholder='Passwort' name="password" ref={passwordRef} onChange={handleChange} />
           </div>
           <div className="submit-container">
-            <button type="submit" className="submit">{process === true ? "Process" : "Log In"}</button>
-            {successMsg && <h4>User Logged In</h4>}
+            <button type="submit" className="submit">{process === true ? "Prozess" : "Einloggen"}</button>
+            {successMsg && <h4>Benutzer eingeloggt</h4>}
           </div>
         </div>
       </form>
