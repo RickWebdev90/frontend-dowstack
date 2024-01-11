@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import "../../../app.css"
 
 export default function DashBalance() {
     const auth = sessionStorage.getItem("userid")
@@ -28,8 +29,8 @@ export default function DashBalance() {
     }
     }; 
   return (
-    <div>
-      <h1>{balance}</h1>
+    <div className='dashboard-balance app-boxshadow'>
+      <h2>Du hast diesen Monat noch {balance}€</h2>
     </div>
   )
 }

@@ -1,5 +1,8 @@
 import React from 'react';
 import DashBalance from './dashBalance';
+import "../../../app.css"
+import DashGoal from './dashGoal';
+import DashPortfolio from './dashPortfolio';
 
 
 export default function Dashboard() {
@@ -7,9 +10,12 @@ export default function Dashboard() {
   console.log("userid:",auth)
   return (
     <div>
-      <h1>Dashboard</h1>
+      <h1>Dein Dashboard</h1>
+      <div className="dashboard-boxes">
       <DashBalance />
-      {auth && <p>User ID: {auth}</p>}
+      <DashGoal />
+      <DashPortfolio />
+      </div>
     </div>
   );
 }
