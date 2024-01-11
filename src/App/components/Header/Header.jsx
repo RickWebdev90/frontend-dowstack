@@ -5,7 +5,7 @@ import headerLogo from "../../assets/logo/DowStack_Logo_Color.svg";
 import { useUserContext } from '../../hooks/UserContext.jsx';
 
 export default function Header() {
-  const { user } = useUserContext();
+  const auth = sessionStorage.getItem("userid")
 
   return (
     <header>
@@ -15,7 +15,7 @@ export default function Header() {
           <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "#6EB636" : "black" })}>
             <li className="nav-header-item">Hompage</li>
           </NavLink>
-          {user ? <UserNavigation /> : null}
+          {auth ? <UserNavigation /> : null}
         </ul>
         <button><Link to="/login">Login</Link></button>
       </nav>

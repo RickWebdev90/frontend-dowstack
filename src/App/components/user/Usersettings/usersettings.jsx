@@ -6,6 +6,7 @@ import { useUserContext } from "../../../hooks/userContext";
 export default function Usersettings() {
   const [action, setAction] = useState(true);
   const { user } = useUserContext();
+  
 
   const config = {
     method: "GET",

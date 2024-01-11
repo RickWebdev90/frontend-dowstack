@@ -8,7 +8,7 @@ export default function Loginpage() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-  const { setUser } = useUserContext();
+  const { user, setUser } = useUserContext();
 
   function handleChange() {
     const data = { email: emailRef.current.value, password: passwordRef.current.value };
@@ -39,6 +39,10 @@ export default function Loginpage() {
         setSuccessMsg(true);
         setUser(data._id);
         navigate("/dashboard");
+
+        const auth = data._id;
+    sessionStorage.setItem("userid", JSON.stringify(auth))
+
       } else if (data.resCode === 1) {
         console.log("Benutzer nicht gefunden");
         setUser(null);
@@ -48,6 +52,7 @@ export default function Loginpage() {
       console.log("Login fehlgeschlagen", err);
       setUser(null);
     }
+    
   }
 
   return (
