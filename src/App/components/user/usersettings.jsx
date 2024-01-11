@@ -44,7 +44,6 @@ export default function Usersettings() {
         </div>
         <div className="delete-container">
           <PopupDelete />
-          {/* <button className="userSubmit delete">Account Löschen</button> */}
         </div>
       </div>
     </div>
