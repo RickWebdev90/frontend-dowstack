@@ -1,5 +1,6 @@
 import React from 'react';
-import { useUserContext } from '../../hooks/userContext';
+import DashBalance from './dashBalance';
+
 
 export default function Dashboard() {
   const auth = sessionStorage.getItem("userid")
@@ -7,6 +8,7 @@ export default function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
+      <DashBalance />
       {auth && <p>User ID: {auth}</p>}
     </div>
   );
