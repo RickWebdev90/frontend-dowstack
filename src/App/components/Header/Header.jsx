@@ -15,7 +15,7 @@ export default function Header() {
           <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "#6EB636" : "black" })}>
             <li className="nav-header-item">Hompage</li>
           </NavLink>
-          {user === "authenticated" ? <UserNavigation /> : null}
+          {user ? <UserNavigation /> : null}
         </ul>
         <button><Link to="/login">Login</Link></button>
       </nav>
