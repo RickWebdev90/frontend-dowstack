@@ -8,9 +8,9 @@ import Portfolio from '../portfolio/Portfolio';
 import Savinggoals from '../savinggoals/Savinggoals';
 import Loginpage from '../user/loginpage';
 import Registration from '../../../Landingpage/Registration/Registration';
-import Usersettings from '../User/usersettings';
+import Usersettings from '../User/Usersettings/usersettings';
 import NotFoundPage from '../NotFoundPage';
-import PopupDelete from '../User/popupDelete';
+import PopupDelete from '../User/Usersettings/PopupDelete';
 import ProtectedRoutes from './ProtectedRoutes';
 
 const AppRouter = createBrowserRouter(
