@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import IncomeCard from "./expenseCard";
+import ExpenseCard from "./expenseCard";
 
 function isMongoDBObjectId(id) {
   return (
@@ -7,8 +7,8 @@ function isMongoDBObjectId(id) {
   );
 }
 
-function IncomeEntry() {
-  const [incomeList, setIncomeList] = useState([]);
+function ExpenseEntry() {
+  const [expenseList, setExpenseList] = useState([]); // Angepasster Zustand
 
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
@@ -17,11 +17,11 @@ function IncomeEntry() {
       try {
         if (isMongoDBObjectId(userId)) {
           const response = await fetch(
-            `https://dowstack.onrender.com/in/user/${userId}`
+            `https://dowstack.onrender.com/out/user/${userId}` // Angepasste URL für Ausgaben
           );
           const data = await response.json();
-          console.log("INCOME DATA 💲", data);
-          setIncomeList(data);
+          console.log("EXPENSE DATA 💸", data); // Angepasste Ausgabe
+          setExpenseList(data);
         }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);
@@ -30,11 +30,11 @@ function IncomeEntry() {
     fetchData();
   }, []);
 
-  const listOfIncome = incomeList?.map((item) => {
+  const listOfExpenses = expenseList?.map((item) => {
     console.log(item);
     return (
       <div key={item._id}>
-        <IncomeCard
+        <ExpenseCard // Angepasster Komponentenaufruf
           title={item.title}
           amount={item.amount}
           recurring={item.recurring}
@@ -45,9 +45,9 @@ function IncomeEntry() {
   });
   return (
     <div>
-      <h1>💰income Entry💰</h1>
-      <ul>{listOfIncome}</ul>
+      <h1>💸 Expense Entry 💸</h1> {/* Angepasster Überschrift */}
+      <ul>{listOfExpenses}</ul>
     </div>
   );
 }
-export default IncomeEntry;
+export default ExpenseEntry;

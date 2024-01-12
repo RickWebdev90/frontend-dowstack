@@ -12,10 +12,10 @@ export default function Cashflow() {
       </div>
       <Monatsauswahl />
       <div>
-        <ExpenseEntry />
+        <IncomeEntry />
       </div>
       <div>
-        <IncomeEntry />
+        <ExpenseEntry />
       </div>
       <div className="cashflow-oben">
         <div className="cashflow-income"></div>
