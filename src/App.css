@@ -145,7 +145,6 @@ a:link, a:visited{
     display: flex; 
     justify-content: center;
     align-items: center;
-    border: 2px solid green;
     gap: 10px; 
 }
 
@@ -175,4 +174,19 @@ a:link, a:visited{
     align-items: center;
     justify-content: center;
     background-color: rgb(224, 221, 221);
+}
+
+.cashflow-oben{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sparziele-balance{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-header{
+    display: flex;
+    justify-content: space-evenly;
 }
