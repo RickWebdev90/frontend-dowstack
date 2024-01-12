@@ -2,6 +2,7 @@ import React from "react";
 import Monatsauswahl from "./monatsauswahl";
 import IncomeEntry from "../Income";
 import CashflowBalance from "./cashflowBalance";
+import ExpenseEntry from "../Expense";
 
 export default function Cashflow() {
   return (
@@ -10,6 +11,9 @@ export default function Cashflow() {
         <h1>Dein Cashflow</h1>
       </div>
       <Monatsauswahl />
+      <div>
+        <ExpenseEntry />
+      </div>
       <div>
         <IncomeEntry />
       </div>
