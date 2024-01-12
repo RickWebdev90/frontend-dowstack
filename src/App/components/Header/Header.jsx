@@ -6,7 +6,7 @@ import { useUserContext } from '../../hooks/UserContext.jsx';
 
 export default function Header() {
   const auth = sessionStorage.getItem("userid")
-
+  console.log(auth)
   return (
     <header>
       <nav className="header-navbar">
@@ -15,7 +15,8 @@ export default function Header() {
           <NavLink to="/" style={({ isActive }) => ({ color: isActive ? "#6EB636" : "black" })}>
             <li className="nav-header-item">Hompage</li>
           </NavLink>
-          {auth ? <UserNavigation /> : null}
+          {auth != null ? <UserNavigation /> : null}
+          
         </ul>
         <button><Link to="/login">Login</Link></button>
       </nav>
