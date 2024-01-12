@@ -7,6 +7,7 @@ html, body {
     padding: 0;
     top: 0;
     left: 0;
+    background-color: rgb(229, 226, 226);
 }
 
 h1, h2, h3, h4, h5, p, label, button, ul, input {
@@ -19,6 +20,7 @@ ul {
 
 .footer-navbar {
     box-shadow: 0px -2px 5px grey;
+    background-color: white;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -85,6 +87,54 @@ a:link, a:visited{
     max-width: 100px;
     padding-left: 12rem;
 }
+.app-boxshadow{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.dashboard-boxes{
+    display: flex;
+    justify-content: space-evenly;
+}
+.dashboard-balance{
+     
+    background-color: #FCD112;
+    border-radius: 25px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+}
+
+.dashboard-portfolio{
+
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    padding-top: -5px;
+}
+
+.dashboard-portfolio-wert{
+    border-radius: 25px;
+    background-color: #FCD112;
+    display: flex;
+    padding: 0 60px;
+}
+
+.dashboard-goal{
+     
+    background-color: #6EB636;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 20vw;
+}
 
 .cashflow-header{
     display: flex;
@@ -95,7 +145,6 @@ a:link, a:visited{
     display: flex; 
     justify-content: center;
     align-items: center;
-    border: 2px solid green;
     gap: 10px; 
 }
 
@@ -125,4 +174,25 @@ a:link, a:visited{
     align-items: center;
     justify-content: center;
     background-color: rgb(224, 221, 221);
+}
+
+.cashflow-oben{
+    display: flex;
+    justify-content: space-around;
+}
+
+.sparziele-balance{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-header{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5vh;
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../../../app.css"
 
-export default function DashBalance() {
+export default function PortfolioBalance() {
     const auth = sessionStorage.getItem("userid")
     const [balance, setBalance] = useState()
 

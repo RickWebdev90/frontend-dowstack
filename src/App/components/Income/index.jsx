@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
+import IncomeCard from "./incomeCard";
 
-// const userId = "6595d4eaa045ef760f46dd15";
+function isMongoDBObjectId(id) {
+  return (
+    typeof id === "string" && id.length === 24 && /^[0-9a-fA-F]+$/.test(id)
+  );
+}
 
-const userId = sessionStorage.getItem("userid");
 function IncomeEntry() {
   const [incomeList, setIncomeList] = useState([]);
 
   useEffect(() => {
+    const userId = sessionStorage.getItem("userid");
+    console.log("USERID:", userId);
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://dowstack.onrender.com/in/user/${userId}`
-        );
-        const data = await response.json();
-        console.log("INCOME DATA 💲", data);
-        setIncomeList(data);
+        if (isMongoDBObjectId(userId)) {
+          const response = await fetch(
+            `https://dowstack.onrender.com/in/user/${userId}`
+          );
+          const data = await response.json();
+          console.log("INCOME DATA 💲", data);
+          setIncomeList(data);
+        }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);
       }
@@ -24,7 +32,16 @@ function IncomeEntry() {
 
   const listOfIncome = incomeList?.map((item) => {
     console.log(item);
-    return <h1 key={item._id}>{item.amount}</h1>;
+    return (
+      <div key={item._id}>
+        <IncomeCard
+          title={item.title}
+          amount={item.amount}
+          recurring={item.recurring}
+          date={item.date}
+        />
+      </div>
+    );
   });
   return (
     <div>
