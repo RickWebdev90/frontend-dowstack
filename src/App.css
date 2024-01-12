@@ -190,3 +190,9 @@ a:link, a:visited{
     display: flex;
     justify-content: space-evenly;
 }
+
+.calculator{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
