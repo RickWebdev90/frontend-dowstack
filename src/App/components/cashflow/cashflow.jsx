@@ -1,7 +1,7 @@
 import React from "react";
 import Monatsauswahl from "./monatsauswahl";
 import IncomeEntry from "../Income";
-import CashflowBalance from "./cashflowBalance";
+import CashflowBalance from "./CashflowBalance";
 
 export default function Cashflow() {
   return (
