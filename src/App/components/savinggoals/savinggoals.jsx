@@ -1,9 +1,15 @@
 import React from 'react'
+import SavinggoalsBalance from './savinggoalsBalance'
 
 export default function Savinggoals() {
   return (
     <div>
-      <h1>SavingGoals</h1>
+      <div className="sparziele-title">
+      <h1>Deine Sparziele</h1>
+      </div>
+      <div className="sparziele-balance">
+        <SavinggoalsBalance />
+      </div>
     </div>
   )
 }
