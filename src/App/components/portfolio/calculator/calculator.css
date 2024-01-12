@@ -1,0 +1,34 @@
+label, input{
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-inputs{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.calculator-inputs input{
+    border-radius: 10px;
+    height: 3vh;
+}
+
+.calculator-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 4vh;
+}
+
+.calculator-button button{
+    border-radius: 10px;
+    height: 4vh;
+    font-size: large;
+    color: white;
+    background: #267bc6;
+}
+
+.calculator-ergebnis{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

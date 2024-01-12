@@ -1,6 +1,7 @@
 import React from 'react'
 import PortfolioBalance from './portfolioBalance'
 import AssetsPortfolio from './assetsPortfolio'
+import Calculator from './Calculator/Calculator'
 
 export default function Portfolio() {
   return (
@@ -12,6 +13,9 @@ export default function Portfolio() {
         <PortfolioBalance/>
         <AssetsPortfolio/>
         <div>Diagram</div>
+      </div>
+      <div className="calculator">
+        <Calculator />
       </div>
     </div>
   )
