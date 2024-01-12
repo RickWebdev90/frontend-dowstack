@@ -1,6 +1,6 @@
 import React from 'react'
-import PortfolioBalance from './portfolioBalance'
-import AssetsPortfolio from './assetsPortfolio'
+import PortfolioBalance from './PortfolioBalance'
+import AssetsPortfolio from './AssetsPortfolio'
 import Calculator from './Calculator/Calculator'
 
 export default function Portfolio() {
