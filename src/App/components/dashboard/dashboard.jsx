@@ -1,5 +1,5 @@
 import React from 'react';
-import DashBalance from './dashBalance';
+import DashBalance from './DashBalance';
 import "../../../app.css"
 import DashGoal from './dashGoal';
 import DashPortfolio from './dashPortfolio';
