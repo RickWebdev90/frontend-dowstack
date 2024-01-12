@@ -16,7 +16,6 @@ export default function Header() {
             <li className="nav-header-item">Hompage</li>
           </NavLink>
           {auth != null ? <UserNavigation /> : null}
-          
         </ul>
         <button><Link to="/login">Login</Link></button>
       </nav>
