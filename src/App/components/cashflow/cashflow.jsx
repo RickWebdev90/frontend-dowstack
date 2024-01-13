@@ -7,26 +7,24 @@ import PopupCreate from "../Popup/PopupCreate";
 
 export default function Cashflow() {
   return (
-    <div className="cashflow-header">
-      <div className="cashflow-title">
-        <h1>Dein Cashflow</h1>
-      </div>
-      <Monatsauswahl />
-      <div>
-        <PopupCreate />
-      </div>
-      <div>
-        <IncomeEntry />
-      </div>
-      <div>
-        <ExpenseEntry />
-      </div>
-      <div className="cashflow-oben">
-        <div className="cashflow-income"></div>
+    <div>
+      <div className="cashflow-header">
+        <div className="cashflow-title">
+          <h1>Dein Cashflow</h1>
+        </div>
+        <Monatsauswahl />
+        <div>
+          <PopupCreate />
+        </div>
         <CashflowBalance />
       </div>
-      <div className="cashflow-outcome">
-        <div>Hier ausgaben</div>
+      <div className="cashflow-section1">
+        <div className="income-container">
+          <IncomeEntry />
+        </div>
+        <div>
+          <ExpenseEntry />
+        </div>
       </div>
     </div>
   );

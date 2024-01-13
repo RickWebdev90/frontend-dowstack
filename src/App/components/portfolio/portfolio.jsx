@@ -2,6 +2,7 @@ import React from 'react'
 import PortfolioBalance from './PortfolioBalance'
 import AssetsPortfolio from './AssetsPortfolio'
 import Calculator from './Calculator/Calculator'
+import { PortfolioChart } from './PortfolioChart'
 
 export default function Portfolio() {
   return (
@@ -12,7 +13,9 @@ export default function Portfolio() {
       <div className="portfolio-header">
         <PortfolioBalance/>
         <AssetsPortfolio/>
-        <div>Diagram</div>
+        <div className='portfolio-chart'>
+        <PortfolioChart />
+        </div>
       </div>
       <div className="calculator">
         <Calculator />
