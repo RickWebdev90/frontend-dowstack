@@ -3,6 +3,7 @@ import Monatsauswahl from "./monatsauswahl";
 import IncomeEntry from "../Income";
 import CashflowBalance from "./cashflowBalance";
 import ExpenseEntry from "../Expense";
+import PopupCreate from "../Popup/PopupCreate";
 
 export default function Cashflow() {
   return (
@@ -11,6 +12,9 @@ export default function Cashflow() {
         <h1>Dein Cashflow</h1>
       </div>
       <Monatsauswahl />
+      <div>
+        <PopupCreate />
+      </div>
       <div>
         <IncomeEntry />
       </div>
