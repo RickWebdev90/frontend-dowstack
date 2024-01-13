@@ -17,7 +17,7 @@ label, input{
 .calculator-inputs input{
     border-radius: 10px;
     height: 3vh;
-}
+}      
 
 .calculator-button{
     display: flex;

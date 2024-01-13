@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import UserNavigation from "./components/Navigation";
 import { NavLink, Link } from "react-router-dom";
 import headerLogo from "../../assets/logo/DowStack_Logo_Color.svg";
+import { useUserContext } from "../../hooks/userContext";
 
 export default function Header() {
-  const auth = sessionStorage.getItem("userid");
-  console.log(auth);
+  const { user } = useUserContext();
+  const auth = sessionStorage.getItem("userid")
+
   return (
     <header>
       <nav className="header-navbar">
@@ -19,7 +21,7 @@ export default function Header() {
           >
             <li className="nav-header-item">Hompage</li>
           </NavLink>
-          {auth != null ? <UserNavigation /> : null}
+          {user || auth != null ? <UserNavigation /> : null}
         </ul>
         <button>
           <Link to="/login">Login</Link>
