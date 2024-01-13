@@ -5,7 +5,7 @@ import { useUserContext } from "../../../hooks/userContext";
 
 export default function Usersettings() {
   const [action, setAction] = useState(true);
-  const { user } = useUserContext();
+  const auth = sessionStorage.getItem("userid");
   
 
   const config = {
@@ -26,7 +26,7 @@ export default function Usersettings() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://dowstack.onrender.com/users/${user}`, config);
+      const response = await fetch(`https://dowstack.onrender.com/users/${auth}`, config);
       const data = await response.json();
       setUserData(data);
     } catch (err) {
