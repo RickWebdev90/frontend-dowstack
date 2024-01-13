@@ -6,7 +6,6 @@ import { useUserContext } from "../../../hooks/userContext";
 export default function Usersettings() {
   const [action, setAction] = useState(true);
   const auth = sessionStorage.getItem("userid");
-  
 
   const config = {
     method: "GET",
@@ -15,18 +14,21 @@ export default function Usersettings() {
     },
   };
   const [userData, setUserData] = useState({
-    username: '',
-    email: '',
-    password: '',
+    username: "",
+    email: "",
+    password: "",
   });
-  
+
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
-      const response = await fetch(`https://dowstack.onrender.com/users/${auth}`, config);
+      const response = await fetch(
+        `https://dowstack.onrender.com/users/${auth}`,
+        config
+      );
       const data = await response.json();
       setUserData(data);
     } catch (err) {
@@ -36,11 +38,11 @@ export default function Usersettings() {
 
   const handleUpdate = async () => {
     const updateData = {
-      userId:user, 
-      updateData:{
-      username: userData.username,
-      password: userData.password,
-      }
+      userId: user,
+      updateData: {
+        username: userData.username,
+        password: userData.password,
+      },
     };
 
     const updateConfig = {
@@ -52,7 +54,10 @@ export default function Usersettings() {
     };
 
     try {
-      const response = await fetch('https://dowstack.onrender.com/users/settings', updateConfig);
+      const response = await fetch(
+        "https://dowstack.onrender.com/users/settings",
+        updateConfig
+      );
       const updatedData = await response.json();
       console.log("Update successful", updatedData);
       setAction(true);
@@ -73,7 +78,9 @@ export default function Usersettings() {
             type="text"
             readOnly={action}
             value={userData.username}
-            onChange={(e) => setUserData({ ...userData, username: e.target.value })}
+            onChange={(e) =>
+              setUserData({ ...userData, username: e.target.value })
+            }
           />
         </div>
         <div className="inputGray">
@@ -86,8 +93,9 @@ export default function Usersettings() {
             type="password"
             readOnly={action}
             placeholder="Hier neues Passwort eingeben"
-            
-            onChange={(e) => setUserData({ ...userData, password: e.target.value })}
+            onChange={(e) =>
+              setUserData({ ...userData, password: e.target.value })
+            }
           />
         </div>
         <div className="submit-container">
