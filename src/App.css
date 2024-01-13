@@ -116,6 +116,7 @@ a:link, a:visited{
     align-items: center;
     width: 20vw;
     padding-top: -5px;
+    background-color: white;
 }
 
 .dashboard-portfolio-wert{
@@ -181,6 +182,11 @@ a:link, a:visited{
     justify-content: space-around;
 }
 
+.expense-container{
+    display: flex;
+    border: 2px solid black;
+}
+
 .sparziele-balance{
     display: flex;
     justify-content: center;
@@ -189,10 +195,23 @@ a:link, a:visited{
 .portfolio-header{
     display: flex;
     justify-content: space-evenly;
+    height: 35vh;
+    padding-bottom: 5vh;
+}
+
+.portfolio-chart{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 25px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
 }
 
 .calculator{
     display: flex;
     flex-direction: column;
     padding-top: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 25px;
 }

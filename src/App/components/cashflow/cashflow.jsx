@@ -14,7 +14,7 @@ export default function Cashflow() {
       <div>
         <IncomeEntry />
       </div>
-      <div>
+      <div className="expense-container">
         <ExpenseEntry />
       </div>
       <div className="cashflow-oben">
@@ -22,7 +22,6 @@ export default function Cashflow() {
         <CashflowBalance />
       </div>
       <div className="cashflow-outcome">
-        <div>Hier ausgaben</div>
       </div>
     </div>
   );
