@@ -6,22 +6,17 @@ import ExpenseEntry from "../Expense";
 
 export default function Cashflow() {
   return (
+    <div>
     <div className="cashflow-header">
       <div className="cashflow-title">
         <h1>Dein Cashflow</h1>
       </div>
       <Monatsauswahl />
-      <div>
-        <IncomeEntry />
-      </div>
-      <div className="expense-container">
-        <ExpenseEntry />
-      </div>
-      <div className="cashflow-oben">
-        <div className="cashflow-income"></div>
-        <CashflowBalance />
-      </div>
-      <div className="cashflow-outcome">
+      <CashflowBalance />
+    </div>
+    <div className="cashflow-section1">
+      <div className="income-container"><IncomeEntry /></div>
+        <div><ExpenseEntry /></div>
       </div>
     </div>
   );

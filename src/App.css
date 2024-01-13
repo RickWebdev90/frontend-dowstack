@@ -182,9 +182,14 @@ a:link, a:visited{
     justify-content: space-around;
 }
 
+.cashflow-section1{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .expense-container{
     display: flex;
-    border: 2px solid black;
+    justify-content: flex-start
 }
 
 .sparziele-balance{
