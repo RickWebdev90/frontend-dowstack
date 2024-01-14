@@ -1,27 +1,9 @@
-// import React from "react";
 import Popup from "reactjs-popup";
+import "./Popup.css";
 import { useNavigate } from "react-router-dom";
+import CurrencyInput from "../CurrencyInput/Index";
 
 export default function PopupCreate() {
-  //   const navigate = useNavigate();
-  //   const [direction, setDirection] = React.useState(null);
-  //   const [title, setTitle] = React.useState("");
-  //   const [amount, setAmount] = React.useState("");
-  //   const [recurring, setRecurring] = React.useState(false);
-
-  //   const handleSwitchChange = () => {
-  //     setDirection(direction === "in" ? "out" : "in");
-  //   };
-
-  //   const handleSave = () => {
-  //     console.log("Gespeichert:", {
-  //       direction,
-  //       title,
-  //       amount,
-  //       recurring,
-  //     });
-  //   };
-
   return (
     <Popup
       trigger={<button className="userSubmit delete"> ADD ➕ </button>}
@@ -38,6 +20,20 @@ export default function PopupCreate() {
               <div className="header">
                 <h3>Create a new Entry ✨</h3>
               </div>
+              <form>
+                <label>Art der Buchung</label>
+                <select>
+                  <option value="Expense">Ausgabe</option>
+                  <option value="Income">Einnahme</option>
+                </select>
+                <label>Bezeichnung</label>
+                <input type="text" required placeholder="Titel" />
+                <label>Betrag</label>
+                <CurrencyInput />
+                <label>Wiederkehrend?</label>
+                <input type="radio" />
+                <button>Speichern</button>
+              </form>
             </div>
           </div>
         );
