@@ -2,6 +2,10 @@
     font-family: "Montserrat", sans-serif;
 }
 
+main {
+    min-height: 80vh;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -94,6 +98,7 @@ a:link, a:visited{
 .dashboard-boxes{
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 3vh;
 }
 .dashboard-balance{
      
@@ -135,6 +140,32 @@ a:link, a:visited{
     text-align: center;
     justify-content: center;
     width: 20vw;
+}
+
+.dashboard-charts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.dashboard-barchart-container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.dashboard-dognutchart-container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+.dashboard-dognutchart{
+    display: flex;
 }
 
 .cashflow-header{
