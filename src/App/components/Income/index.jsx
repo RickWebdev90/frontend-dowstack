@@ -20,8 +20,9 @@ function IncomeEntry() {
             `https://dowstack.onrender.com/in/user/${userId}`
           );
           const data = await response.json();
+          console.log("data income", data)
           console.log("INCOME DATA 💲", data);
-          setIncomeList(data);
+          setIncomeList(data.msg ? []: data);
         }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);
