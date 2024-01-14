@@ -112,7 +112,7 @@ a:link, a:visited{
     padding-left: 12rem;
 }
 .app-boxshadow{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .dashboard-boxes{
@@ -171,17 +171,19 @@ a:link, a:visited{
 .dashboard-barchart-container{
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
     padding: 1rem;
+    background-color: white;
 }
 
 .dashboard-dognutchart-container{
     display: flex;
     flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
     padding: 1rem;
+    background-color: white;
 }
 
 .dashboard-dognutchart{
@@ -211,6 +213,7 @@ a:link, a:visited{
     padding-top: 15px;
     font-size: 3rem;
     text-align: center;
+    background-color: white;
 }
 
 .cashflow-title{
@@ -225,7 +228,7 @@ a:link, a:visited{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(224, 221, 221);
+    background-color: white;
 }
 
 .cashflow-oben{
@@ -256,18 +259,180 @@ a:link, a:visited{
 }
 
 .portfolio-chart{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
     width: 400px;
     display: flex;
     justify-content: center;
     background-color: white;
+    padding: 10px;
 }
 
 .calculator{
     display: flex;
     flex-direction: column;
     padding-top: 5vh;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
+    background-color: white;
+}
+
+.ExpenseEntry{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 15px;
+    
+}
+
+.ExpenseTitle{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.ExpenseAmount{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.ExpenseStatus{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.ExpenseDate{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.ExpenseButton{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.Expense-Cashflow-Container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 2rem;
+    padding-right: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.IncomeEntry{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 15px;
+    
+}
+
+.IncomeTitle{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.IncomeAmount{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.IncomeStatus{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.IncomeDate{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.IncomeButton{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.Income-Cashflow-Container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 2rem;
+    padding-right: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

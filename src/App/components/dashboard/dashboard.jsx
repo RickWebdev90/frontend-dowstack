@@ -5,6 +5,7 @@ import DashGoal from './dashGoal';
 import DashPortfolio from './dashPortfolio';
 import BarChartCashflow from './barChartCashflow';
 import DognutChartDashboard from './dognutChartDashboard';
+import ExpenseEntry from '../Expense';
 
 
 export default function Dashboard() {
@@ -35,8 +36,14 @@ export default function Dashboard() {
       <DognutChartDashboard />
       </div>
       </div>
-      <div></div>
       </div>
+      <div className="dashboard-sektion-container">
+      <div className="dashboard-expendes">
+      <ExpenseEntry />
+      </div>  
+      </div>
+      <div></div>
+     
     </div>
   );
 }
