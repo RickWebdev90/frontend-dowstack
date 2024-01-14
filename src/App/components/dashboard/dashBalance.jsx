@@ -30,7 +30,7 @@ export default function DashBalance() {
     }; 
   return (
     <div className='dashboard-balance app-boxshadow'>
-      <h2>Du hast diesen Monat noch {balance}€</h2>
+      <h2>Du hast noch {balance}€ zum Gönnen 🤑</h2>
     </div>
   )
 }

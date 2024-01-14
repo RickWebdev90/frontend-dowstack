@@ -45,14 +45,14 @@ function IncomeEntry() {
       );
     });
     return (
-      <div>
+      <div className="Income-Cashflow-Container">
         <h1>💰Einnahmen💰</h1>
         <ul>{listOfIncome}</ul>
       </div>
     );
   } else {
     return (
-      <div>
+      <div className="Income-Cashflow-Container">
         <h1>💰Einnahmen💰</h1>
         <ul>noch keine Einnahmen</ul>
       </div>

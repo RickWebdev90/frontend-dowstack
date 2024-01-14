@@ -42,14 +42,14 @@ function ExpenseEntry() {
       );
     });
     return (
-      <div>
+      <div className="Expense-Cashflow-Container">
         <h1>💸 Ausgaben 💸</h1>
         <ul>{listOfExpenses}</ul>
       </div>
     );
   } else {
     return (
-      <div>
+      <div className="Expense-Cashflow-Container">
         <h1>💸 Ausgaben 💸</h1>
         <ul>Noch keine Ausgaben</ul>
       </div>
