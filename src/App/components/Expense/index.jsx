@@ -19,7 +19,7 @@ function ExpenseEntry() {
           );
           const data = await response.json();
           console.log("EXPENSE DATA 💸", data);
-          typeof data === Array ? setExpenseList(data) : setExpenseList([]);
+          data.msg ? setExpenseList([]) : setExpenseList(data);
         }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);
@@ -27,7 +27,7 @@ function ExpenseEntry() {
     };
     fetchData();
   }, []);
-  if (expenseList > 0) {
+  if (expenseList.length > 0) {
     const listOfExpenses = expenseList?.map((item) => {
       console.log(item);
       return (
