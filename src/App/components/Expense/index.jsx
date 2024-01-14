@@ -6,10 +6,8 @@ function isMongoDBObjectId(id) {
     typeof id === "string" && id.length === 24 && /^[0-9a-fA-F]+$/.test(id)
   );
 }
-
 function ExpenseEntry() {
-  const [expenseList, setExpenseList] = useState([]); // Angepasster Zustand
-
+  const [expenseList, setExpenseList] = useState([]);
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
     console.log("USERID:", userId);
@@ -17,11 +15,11 @@ function ExpenseEntry() {
       try {
         if (isMongoDBObjectId(userId)) {
           const response = await fetch(
-            `https://dowstack.onrender.com/out/user/${userId}` // Angepasste URL für Ausgaben
+            `https://dowstack.onrender.com/out/user/${userId}`
           );
           const data = await response.json();
-          console.log("EXPENSE DATA 💸", data); // Angepasste Ausgabe
-          setExpenseList(data);
+          console.log("EXPENSE DATA 💸", data);
+          typeof data === Array ? setExpenseList(data) : setExpenseList([]);
         }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);
@@ -29,25 +27,33 @@ function ExpenseEntry() {
     };
     fetchData();
   }, []);
-
-  const listOfExpenses = expenseList?.map((item) => {
-    console.log(item);
+  if (expenseList > 0) {
+    const listOfExpenses = expenseList?.map((item) => {
+      console.log(item);
+      return (
+        <div key={item._id}>
+          <ExpenseCard
+            title={item.title}
+            amount={item.amount}
+            recurring={item.recurring}
+            date={item.date}
+          />
+        </div>
+      );
+    });
     return (
-      <div key={item._id}>
-        <ExpenseCard // Angepasster Komponentenaufruf
-          title={item.title}
-          amount={item.amount}
-          recurring={item.recurring}
-          date={item.date}
-        />
+      <div>
+        <h1>💸 Ausgaben 💸</h1>
+        <ul>{listOfExpenses}</ul>
       </div>
     );
-  });
-  return (
-    <div>
-      <h1>💸 Expense Entry 💸</h1> {/* Angepasster Überschrift */}
-      <ul>{listOfExpenses}</ul>
-    </div>
-  );
+  } else {
+    return (
+      <div>
+        <h1>💸 Ausgaben 💸</h1>
+        <ul>Noch keine Ausgaben</ul>
+      </div>
+    );
+  }
 }
 export default ExpenseEntry;
