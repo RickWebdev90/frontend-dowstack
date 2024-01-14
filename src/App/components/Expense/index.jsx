@@ -21,7 +21,7 @@ function ExpenseEntry() {
           );
           const data = await response.json();
           console.log("EXPENSE DATA 💸", data); // Angepasste Ausgabe
-          setExpenseList(data.msg ? [] : data);
+          setExpenseList(data);
         }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);

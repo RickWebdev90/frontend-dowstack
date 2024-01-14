@@ -22,7 +22,7 @@ function IncomeEntry() {
           const data = await response.json();
           console.log("data income", data)
           console.log("INCOME DATA 💲", data);
-          setIncomeList(data.msg ? []: data);
+          setIncomeList(data);
         }
       } catch (err) {
         console.error("ERROR while fetching Data:", err.message);
