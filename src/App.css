@@ -70,6 +70,26 @@ ul {
     margin-right: 2rem;
 }
 
+.buttonLink{
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    height: 3rem;
+    width: 6rem;
+    font-size: 1.2rem;
+    background: #267bc6;
+    color: white;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 2rem;
+   align-items: center;
+   padding: 3px 8px
+}
+
+.buttonLink:hover{
+    cursor: pointer;
+}
+
 a:link, a:visited{
     text-decoration: none;
     color: white;

@@ -41,8 +41,8 @@ export default function Loginpage() {
         navigate("/dashboard");
 
         const auth = data._id;
-    sessionStorage.setItem("userid", auth)
-        
+        sessionStorage.setItem("userid", auth)
+
 
       } else if (data.resCode === 1) {
         console.log("Benutzer nicht gefunden");
@@ -53,7 +53,7 @@ export default function Loginpage() {
       console.log("Login fehlgeschlagen", err);
       setUser(null);
     }
-    
+
   }
 
   return (
