@@ -20,11 +20,11 @@ export default function PopupCreate() {
     >
       {(close) => {
         return (
-          <div className="delete-modal">
+          <div className="cashflow-modal">
             <button className="close" onClick={close}>
               &times;
             </button>
-            <div className="delete-modal-container">
+            <div className="cashflow-modal-container">
               <div className="header">
                 <h3>Create a new Entry ✨</h3>
               </div>

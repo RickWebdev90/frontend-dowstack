@@ -94,6 +94,7 @@
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .userSubmit{
@@ -127,6 +128,7 @@
 
 .delete{
     background: red;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .delete:hover{
@@ -198,7 +200,6 @@
 }
 
 .usersettings{
-    border: 2px solid black;
     max-height: 80vh;
     display: flex;
     justify-content: center;
@@ -208,6 +209,7 @@
     margin-bottom: 10px;
     margin-top: 10px;
     padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 popup Bereich
@@ -221,7 +223,7 @@ popup Bereich
 }
 .actions{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding-bottom: 2rem;
 }
 
