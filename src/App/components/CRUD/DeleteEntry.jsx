@@ -1,5 +1,5 @@
 const deleteEntry = async (id, boolean) => {
-  const deleteRoute = boolean === "Income" ? "in" : "out";
+  const deleteRoute = boolean === "true" ? "in" : "out";
   const deleteRequest = {
     _id: id,
   };

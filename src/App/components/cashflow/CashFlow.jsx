@@ -3,8 +3,10 @@ import IncomeEntry from "../Income";
 import CashFlowBalance from "./CashFlowBalance.jsx";
 import ExpenseEntry from "../Expense";
 import PopupCreate from "../Popup/PopupCreate";
+import { useState } from "react";
 
 export default function CashFlow() {
+  const [trigger, setTrigger] = useState(false);
   return (
     <div>
       <div className="cashflow-header">
@@ -13,23 +15,23 @@ export default function CashFlow() {
         </div>
         <MonatsAuswahl />
         <div></div>
-        </div>
-        <div className="cashflow-section1">
+      </div>
+      <div className="cashflow-section1">
         <div className="cashflow-income-container">
-          <IncomeEntry />
+          <IncomeEntry trigger={trigger} />
         </div>
         <div className="cashflow-balance-add-container">
-        <div className="cashflow-balance">
-        <CashFlowBalance />
+          <div className="cashflow-balance">
+            <CashFlowBalance />
+          </div>
+          <div className="cashflow-balance-placeholder">
+            <PopupCreate setTrigger={setTrigger} trigger={trigger} />
+          </div>
         </div>
-        <div className="cashflow-balance-placeholder">
-        <PopupCreate />
-        </div>
-        </div>
-        </div>
-        <div className="cashflow-section2">
-          <div className="cashflow-Expenses">
-        <ExpenseEntry />
+      </div>
+      <div className="cashflow-section2">
+        <div className="cashflow-Expenses">
+          <ExpenseEntry trigger={trigger} />
         </div>
         <div className="cashflow-placholder-expenses"></div>
       </div>
