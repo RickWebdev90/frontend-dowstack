@@ -5,52 +5,53 @@ import TypeInput from "../Inputs/TypeInput";
 import RecurrInput from "../Inputs/RecurrInput";
 import TitleInput from "../Inputs/TitleInput";
 import fetchBalance from "../user/UserBalance/Index";
+import updateBalance from "../CRUD/UpdateBalance";
 import { useState, useEffect } from "react";
 
 export default function PopupCreate() {
-  const [type, setType] = useState("Expense");
+  const [type, setType] = useState(false);
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [recurr, setRecurr] = useState(false);
   const [date, setDate] = useState("");
-  const [userBalance, setUserBalance] = useState("");
+  // const [userBalance, setUserBalance] = useState("");
   const userId = sessionStorage.getItem("userid");
   useEffect(() => {
-    fetchBalance(setUserBalance);
+    // fetchBalance(setUserBalance);
   }, []);
 
-  const updateBalance = async (boolean, amount, balance) => {
-    const amountReformed = amount.replace(",", ".");
-    const amountAsFloat = parseFloat(amountReformed);
-    const updatedBalance =
-      boolean === "Income" ? balance + amountAsFloat : balance - amountAsFloat;
-    const newBalance = {
-      userId: userId,
-      updateData: {
-        balance: updatedBalance,
-      },
-    };
-    const configUpdate = {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newBalance),
-    };
-    try {
-      const response = await fetch(
-        "https://dowstack.onrender.com/users/settings",
-        configUpdate
-      );
-      const data = await response.json();
-      console.log("UPDATE BALANCE MSG:", data);
-    } catch (err) {
-      console.log("creating Ticket failed!", err);
-    }
-  };
+  // const updateBalance = async (boolean, amount, balance) => {
+  //   const amountReformed = amount.replace(",", ".");
+  //   const amountAsFloat = parseFloat(amountReformed);
+  //   const updatedBalance =
+  //     boolean === "Income" ? balance + amountAsFloat : balance - amountAsFloat;
+  //   const newBalance = {
+  //     userId: userId,
+  //     updateData: {
+  //       balance: updatedBalance,
+  //     },
+  //   };
+  //   const configUpdate = {
+  //     method: "PUT",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(newBalance),
+  //   };
+  //   try {
+  //     const response = await fetch(
+  //       "https://dowstack.onrender.com/users/settings",
+  //       configUpdate
+  //     );
+  //     const data = await response.json();
+  //     console.log("UPDATE BALANCE MSG:", data);
+  //   } catch (err) {
+  //     console.log("creating Ticket failed!", err);
+  //   }
+  // };
 
   const saveData = async (c) => {
-    const URLRoute = type === "Expense" ? "out" : "in";
+    const URLRoute = type === false ? "out" : "in";
     const amountReformed = amount.replace(",", ".");
     const amountAsFloat = parseFloat(amountReformed);
     const newEntry = {
@@ -106,7 +107,8 @@ export default function PopupCreate() {
                   <button
                     onClick={() => {
                       saveData(close);
-                      updateBalance(type, amount, userBalance);
+                      console.log(typeof type, type);
+                      updateBalance(userId, type, amount);
                     }}
                   >
                     Speichern

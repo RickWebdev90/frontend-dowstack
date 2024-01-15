@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
 import deleteEntry from "../CRUD/DeleteEntry";
+import updateBalance from "../CRUD/UpdateBalance";
 
 const ExpenseCard = ({ _id, title, amount, recurring, date }) => {
   const rawDate = date;
   const parsedDate = new Date(rawDate);
   const formatDate = format(parsedDate, "dd.MM.yyyy");
+  const userId = sessionStorage.getItem("userid");
   const [entryId, setEntryId] = useState("");
   useEffect(() => {
     setEntryId(_id);
@@ -20,7 +22,8 @@ const ExpenseCard = ({ _id, title, amount, recurring, date }) => {
         <button
           className="ExpenseButton"
           onClick={() => {
-            deleteEntry(entryId, "Expense");
+            deleteEntry(entryId, "false");
+            updateBalance(userId, "true", amount);
           }}
         >
           Löschen
