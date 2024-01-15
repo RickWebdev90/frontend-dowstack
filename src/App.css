@@ -6,6 +6,10 @@ main {
     min-height: 80vh;
 }
 
+span{
+    font-weight: 900;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -186,8 +190,31 @@ a:link, a:visited{
     background-color: white;
 }
 
-.dashboard-dognutchart{
+.dashboard-calculator{
     display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    flex-direction: column;
+    width: 26vw;
+    height: 30vh;
+    font-size: large;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    margin: auto; 
+}
+
+.dashboard-expendes{
+    margin: auto;
+}
+
+.dashboard-sektion-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .cashflow-header{
