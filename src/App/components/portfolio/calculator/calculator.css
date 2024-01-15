@@ -39,3 +39,9 @@ label, input{
     flex-direction: column;
     text-align: center;
 }
+
+.calculator-ergebnis p{
+    font-size: larger;
+    font-weight: 900;
+    color: #6EB636;
+}

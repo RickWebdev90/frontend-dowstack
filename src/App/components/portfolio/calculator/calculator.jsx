@@ -28,6 +28,10 @@ export default function Calculator() {
 
     setResult(startkapital.toLocaleString('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2 }));
 
+    const calcYears = spardauerRef.current.value; 
+    const calcResult = JSON.stringify(result);
+    sessionStorage.setItem("calcYears", calcYears)
+    sessionStorage.setItem("calcResult", calcResult)
 
   };
 
@@ -54,7 +58,7 @@ export default function Calculator() {
           <div className="calculator-ergebnis">
             <h2>Ergebnis: </h2>
             <h2>{result}</h2>
-            {result != null ? <p>Super wenn du so weiter sparst, wird ein kleines Vermögen haben</p> : <p></p>}
+            {result != null ? <p>Super wenn du so diszipliniert sparst, wirst du ein kleines Vermögen haben!🤑</p> : <p></p>}
           </div>
         </form>
       </div>

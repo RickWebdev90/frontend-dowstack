@@ -6,6 +6,7 @@ import DashPortfolio from './DashPortfolio.jsx';
 import BarChartCashflow from './BarChartCashflow.jsx';
 import DognutChartDashboard from './DognutChartDashboard.jsx';
 import ExpenseEntry from '../Expense';
+import DashboardCalculator from './DashboardCalculator.jsx';
 export default function Dashboard() {
   //const auth = sessionStorage.getItem("userid")
 
@@ -38,6 +39,9 @@ export default function Dashboard() {
       <div className="dashboard-sektion-container">
         <div className="dashboard-expendes">
           <ExpenseEntry />
+        </div>
+        <div className="dashboard-calculator">
+          <DashboardCalculator />
         </div>
       </div>
       <div></div>
