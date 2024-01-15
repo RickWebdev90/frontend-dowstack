@@ -450,7 +450,8 @@ a:link, a:visited{
 }
 
 .cashflow-modal {
-    background: white;
+    display: flex;
+    flex-direction: column;
   }
 
 .actions{
@@ -474,10 +475,50 @@ a:link, a:visited{
   }
 
   .cashflow-modal-container{
-    border: 1px solid black;
     border-radius: 25px; 
     background-color: white;
-    width: 600px;
-    display: flex;
-    
+    height: 20vh;
+    width: 80vw;
+    border: 2px solid black;
   }
+
+  .cashflow-popup-inputs form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+.cashflow-popup-inputs button{
+    border-radius: 25px;
+    font-size: large;
+    color: white;
+    background-color: #267bc6;
+}
+
+.cashflow-popup-inputs button:hover{
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: large;
+    color: black;
+    background-color: #267bc6;
+}
+
+.cashflow-popup-inputs input{
+    border-radius: 25px;
+}
+
+.cashflow-add-button{
+    background-color: #267bc6;
+    border-radius: 25px;
+    font-size: x-large;
+    color: white;
+    height: 8vh;
+    width: 10vw;
+}
+
+.cashflow-add-button:hover{
+    cursor: pointer;
+    background-color: #6EB636;
+}

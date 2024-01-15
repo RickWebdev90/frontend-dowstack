@@ -14,7 +14,7 @@ export default function PopupCreate() {
 
   return (
     <Popup
-      trigger={<button className="userSubmit delete"> ADD ➕ </button>}
+      trigger={<button className="cashflow-add-button"> ADD ➕ </button>}
       modal
       nested
     >
@@ -26,8 +26,9 @@ export default function PopupCreate() {
             </button>
             <div className="cashflow-modal-container">
               <div className="header">
-                <h3>Create a new Entry ✨</h3>
+                <h3>Neuen Eintrag erstellen ✨</h3>
               </div>
+              <div className="cashflow-popup-inputs">
               <form>
                 <label>Art der Buchung</label>
                 <select>
@@ -43,6 +44,7 @@ export default function PopupCreate() {
                 <DateInput date={date} setDate={setDate} />
                 <button>Speichern</button>
               </form>
+            </div>
             </div>
           </div>
         );
