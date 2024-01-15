@@ -10,7 +10,7 @@ function ExpenseEntry() {
   const [expenseList, setExpenseList] = useState([]);
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
-    console.log("USERID:", userId);
+    // console.log("USERID:", userId);
     const fetchData = async () => {
       try {
         if (isMongoDBObjectId(userId)) {
@@ -18,7 +18,7 @@ function ExpenseEntry() {
             `https://dowstack.onrender.com/out/user/${userId}`
           );
           const data = await response.json();
-          console.log("EXPENSE DATA 💸", data);
+          // console.log("EXPENSE DATA 💸", data);
           data.msg ? setExpenseList([]) : setExpenseList(data);
         }
       } catch (err) {
@@ -29,7 +29,7 @@ function ExpenseEntry() {
   }, []);
   if (expenseList.length > 0) {
     const listOfExpenses = expenseList?.map((item) => {
-      console.log(item);
+      // console.log(item);
       return (
         <div key={item._id}>
           <ExpenseCard
