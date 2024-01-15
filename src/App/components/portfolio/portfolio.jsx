@@ -2,7 +2,7 @@ import React from 'react'
 import PortfolioBalance from './PortfolioBalance'
 import AssetsPortfolio from './AssetsPortfolio'
 import Calculator from './Calculator/Calculator'
-import { PortfolioChart } from './PortfolioChart'
+import PortfolioChart from './PortfolioChart'
 
 export default function Portfolio() {
   return (

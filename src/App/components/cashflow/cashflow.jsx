@@ -13,17 +13,22 @@ export default function Cashflow() {
           <h1>Dein Cashflow</h1>
         </div>
         <Monatsauswahl />
-        <div>
-          <PopupCreate />
+        <div></div>
         </div>
-        <CashflowBalance />
-      </div>
-      <div className="cashflow-section1">
-        <div className="income-container">
+        <div className="cashflow-section1">
+        <div className="cashflow-income-container">
           <IncomeEntry />
         </div>
-        <div>
-          <ExpenseEntry />
+        <div className="cashflow-balance">
+        <CashflowBalance />
+        <div className="cashflow-balance-placeholder">
+        <PopupCreate />
+        </div>
+        </div>
+        </div>
+        <div className="cashflow-section2">
+          <div className="cashflow-Expenses">
+        <ExpenseEntry />
         </div>
       </div>
     </div>

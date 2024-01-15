@@ -67,6 +67,7 @@ export default function Usersettings() {
   };
 
   return (
+    <div className="usersettings-container">
     <div className="usersettings">
       <div className="usersettings-title">
         <h1>Usersettings</h1>
@@ -120,6 +121,7 @@ export default function Usersettings() {
           <PopupDelete />
         </div>
       </div>
+    </div>
     </div>
   );
 }
