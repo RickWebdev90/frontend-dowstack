@@ -4,7 +4,8 @@ import DateInput from "../Inputs/DateInput";
 import TypeInput from "../Inputs/TypeInput";
 import RecurrInput from "../Inputs/RecurrInput";
 import TitleInput from "../Inputs/TitleInput";
-import { useState } from "react";
+import fetchBalance from "../user/UserBalance/Index";
+import { useState, useEffect } from "react";
 
 export default function PopupCreate() {
   const [type, setType] = useState("Expense");
@@ -12,7 +13,46 @@ export default function PopupCreate() {
   const [amount, setAmount] = useState("");
   const [recurr, setRecurr] = useState(false);
   const [date, setDate] = useState("");
+  const [userBalance, setUserBalance] = useState("");
   const userId = sessionStorage.getItem("userid");
+  useEffect(() => {
+    fetchBalance(setUserBalance);
+  }, []);
+
+  const updateBalance = async (boolean, amount, balance) => {
+    const amountReformed = amount.replace(",", ".");
+    const amountAsFloat = parseFloat(amountReformed);
+    console.log(amountAsFloat);
+    const updatedBalance =
+      boolean === "Income" ? balance + amountAsFloat : balance - amountAsFloat;
+    const newBalance = {
+      userId: userId,
+      updateData: {
+        balance: updatedBalance,
+      },
+    };
+    console.log("BOLEAN", boolean);
+    console.log("AMOUNT", typeof amountAsFloat);
+    console.log("USERAMOUNT", typeof updatedBalance);
+    const configUpdate = {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newBalance),
+    };
+    try {
+      const response = await fetch(
+        "http://localhost:3001/users/settings",
+        configUpdate
+      );
+      console.log(response);
+      const data = await response.json();
+      console.log("UPDATE BALANCE MSG:", data);
+    } catch (err) {
+      console.log("creating Ticket failed!", err);
+    }
+  };
 
   const saveData = async (c) => {
     const URLRoute = type === "Expense" ? "out" : "in";
@@ -25,7 +65,7 @@ export default function PopupCreate() {
       amount: amountAsFloat,
       recurring: recurr,
     };
-    const config = {
+    const configCreate = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,9 +75,10 @@ export default function PopupCreate() {
     try {
       const response = await fetch(
         `https://dowstack.onrender.com/${URLRoute}`,
-        config
+        configCreate
       );
       const data = await response.json();
+      console.log("USER TICKER CREATION:", data);
     } catch (err) {
       console.log("creating Ticket failed!", err);
     }
@@ -67,7 +108,14 @@ export default function PopupCreate() {
                   <CurrencyInput amount={amount} setAmount={setAmount} />
                   <RecurrInput recurr={recurr} setRecurr={setRecurr} />
                   <DateInput date={date} setDate={setDate} />
-                  <button onClick={() => saveData(close)}>Speichern</button>
+                  <button
+                    onClick={() => {
+                      saveData(close);
+                      updateBalance(type, amount, userBalance);
+                    }}
+                  >
+                    Speichern
+                  </button>
                 </form>
               </div>
             </div>

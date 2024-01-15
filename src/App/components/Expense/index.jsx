@@ -29,14 +29,15 @@ function ExpenseEntry() {
   }, []);
   if (expenseList.length > 0) {
     const listOfExpenses = expenseList?.map((item) => {
-      // console.log(item);
+      console.log(item);
       return (
         <div key={item._id}>
           <ExpenseCard
+            _id={item._id}
             title={item.title}
             amount={item.amount}
             recurring={item.recurring}
-            date={item.date}
+            date={item.creationDate}
           />
         </div>
       );

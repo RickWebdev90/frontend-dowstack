@@ -32,14 +32,15 @@ function Income() {
   }, []);
   if (incomeList.length > 0) {
     const listOfIncome = incomeList?.map((item) => {
-      // console.log(item);
+      console.log(item);
       return (
         <div key={item._id}>
           <IncomeCard
+            _id={item._id}
             title={item.title}
             amount={item.amount}
             recurring={item.recurring}
-            date={item.date}
+            date={item.creationDate}
           />
         </div>
       );
