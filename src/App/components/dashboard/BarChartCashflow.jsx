@@ -15,14 +15,13 @@ export default function BarChartCashflow() {
                     data: [3000, 2500, 2000, 2400, 3000, 3200, 3000, 2500, 2000, 2400, 3000, 3200],
                     backgroundColor: "#6EB636",
                     borderRadius: 40,
-                    borderWidth: 5,
                 },
                 {
                     label: "Ausgaben",
                     data: [2800, 2600, 2200, 2500, 2000, 2100, 2800, 2600, 2200, 2500, 2000, 2100],
                     backgroundColor: "#FF3F49",
                     borderRadius: 40,
-                    borderWidth: 5,
+                
                 }
             ],
         
