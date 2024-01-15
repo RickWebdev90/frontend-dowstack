@@ -18,8 +18,10 @@ export default function CashFlow() {
         <div className="cashflow-income-container">
           <IncomeEntry />
         </div>
+        <div className="cashflow-balance-add-container">
         <div className="cashflow-balance">
         <CashFlowBalance />
+        </div>
         <div className="cashflow-balance-placeholder">
         <PopupCreate />
         </div>
@@ -29,6 +31,7 @@ export default function CashFlow() {
           <div className="cashflow-Expenses">
         <ExpenseEntry />
         </div>
+        <div className="cashflow-placholder-expenses"></div>
       </div>
     </div>
   );

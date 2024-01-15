@@ -32,7 +32,8 @@ export default function Calculator() {
     const calcResult = JSON.stringify(result);
     sessionStorage.setItem("calcYears", calcYears)
     sessionStorage.setItem("calcResult", calcResult)
-
+    console.log(calcResult)
+    console.log("result", (result))
   };
 
   return (

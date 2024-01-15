@@ -131,6 +131,7 @@
     align-content: center;
     flex-direction: row;
     border-radius: 25px;
+    z-index: 1;
  }
 
  .title-subcontainer h1{

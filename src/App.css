@@ -4,6 +4,7 @@
 
 main {
     min-height: 80vh;
+    z-index: 1;
 }
 
 span{
@@ -60,6 +61,7 @@ ul {
     align-items: center;
     background-color: white;
     font-family: "Montserrat", sans-serif;
+
 }
 
 .header-navbar button{
@@ -122,7 +124,7 @@ a:link, a:visited{
 .dashboard-boxes{
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 3vh;
+    padding-bottom: 5vh;
 }
 .dashboard-balance{
      
@@ -207,6 +209,7 @@ a:link, a:visited{
 
 .dashboard-expendes{
     margin: auto;
+    
 }
 
 .dashboard-sektion-container{
@@ -227,6 +230,7 @@ a:link, a:visited{
     justify-content: center;
     align-items: center;
     gap: 10px; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .cashflow-monatsauswahl button{
@@ -241,6 +245,8 @@ a:link, a:visited{
     font-size: 3rem;
     text-align: center;
     background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cashflow-title{
@@ -248,7 +254,6 @@ a:link, a:visited{
 }
 
 .cashflow-monat{
-    border: 1px solid black;
     border-radius: 10px;
     height: 40px;
     width: 200px;
@@ -256,6 +261,7 @@ a:link, a:visited{
     align-items: center;
     justify-content: center;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cashflow-balance{
@@ -277,7 +283,41 @@ a:link, a:visited{
 
 .cashflow-section1{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+}
+
+.cashflow-income-container{
+    width: 65vw;
+    margin-left: 3vw;
+}
+
+.cashflow-balance-add-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.cashflow-section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+}
+
+.cashflow-Expenses{
+    width: 65vw;
+    margin-left: 3vw;
+    padding-bottom: 3vh;
+}
+
+.cashflow-placholder-expenses{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
 }
 
 .expense-container{
