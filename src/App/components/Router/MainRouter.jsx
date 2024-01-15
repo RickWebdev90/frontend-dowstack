@@ -1,8 +1,7 @@
-import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout';
 import Homepage from '../../../Landingpage/Homepage';
-import Dashboard from '../dashboard/dashboard';
+import Dashboard from '../dashboard/Dashboard';
 import Cashflow from '../cashflow/cashflow';
 import Portfolio from '../portfolio/portfolio';
 import Savinggoals from '../savinggoals/savinggoals';
@@ -13,7 +12,7 @@ import NotFoundPage from '../NotFoundPage';
 import PopupDelete from '../user/Usersettings/PopupDelete';
 import ProtectedRoutes from './ProtectedRoutes';
 
-const AppRouter = createBrowserRouter(
+export const AppRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<Homepage />} />
@@ -32,4 +31,4 @@ const AppRouter = createBrowserRouter(
   )
 );
 
-export { AppRouter };
+
