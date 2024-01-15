@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const DateInput = ({ date, setDate }) => {
   const currentDate = new Date();
   const day = currentDate.getDate();
@@ -6,19 +8,18 @@ const DateInput = ({ date, setDate }) => {
   const formattedDate = `${year}-${month < 10 ? "0" + month : month}-${
     day < 10 ? "0" + day : day
   }`;
-  if (date === "") {
-    setDate(formattedDate);
-  }
   const handleDateChange = (event) => {
     setDate(event.target.value);
   };
+  useEffect(() => {
+    if (date === "") {
+      setDate(formattedDate);
+    }
+  }, []);
 
   return (
     <div>
-      <label>
-        Datum:
-        <input type="date" value={date || ""} onChange={handleDateChange} />
-      </label>
+      <input type="date" value={date} onChange={handleDateChange} />
     </div>
   );
 };

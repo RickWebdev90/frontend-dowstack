@@ -8,12 +8,15 @@ const CurrencyInput = ({ amount, setAmount }) => {
   };
 
   return (
-    <input
-      type="text"
-      value={amount}
-      onChange={handleInputChange}
-      placeholder="€"
-    />
+    <>
+      <label>Betrag</label>
+      <input
+        type="text"
+        value={amount}
+        onChange={handleInputChange}
+        placeholder="€"
+      />
+    </>
   );
 };
 
