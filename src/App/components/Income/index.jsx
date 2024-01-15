@@ -12,7 +12,7 @@ function Income() {
 
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
-    console.log("USERID:", userId);
+    // console.log("USERID:", userId);
     const fetchData = async () => {
       try {
         if (isMongoDBObjectId(userId)) {
@@ -20,8 +20,8 @@ function Income() {
             `https://dowstack.onrender.com/in/user/${userId}`
           );
           const data = await response.json();
-          console.log("data income", data)
-          console.log("INCOME DATA 💲", data);
+          // console.log("data income", data)
+          // console.log("INCOME DATA 💲", data);
           data.msg ? setIncomeList([]) : setIncomeList(data);
         }
       } catch (err) {
@@ -32,7 +32,7 @@ function Income() {
   }, []);
   if (incomeList.length > 0) {
     const listOfIncome = incomeList?.map((item) => {
-      console.log(item);
+      // console.log(item);
       return (
         <div key={item._id}>
           <IncomeCard
