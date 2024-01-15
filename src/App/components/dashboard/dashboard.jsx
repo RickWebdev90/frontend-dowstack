@@ -14,9 +14,15 @@ export default function Dashboard() {
     <div>
       <h1>Dein Dashboard</h1>
       <div className="dashboard-boxes">
+        <div className="dashboard-box-balance">
         <DashBalance />
+        </div>
+        <div className="dashboard-box-goal">
         <DashGoal />
+        </div>
+        <div className="dashboard-box-portfolio">
         <DashPortfolio />
+        </div>
       </div>
       <div className="dashboard-charts">
         <div className="dashboard-barchart-container">

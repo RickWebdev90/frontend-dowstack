@@ -70,7 +70,7 @@ export default function LoginPage() {
             <input type="password" placeholder='Passwort' name="password" ref={passwordRef} onChange={handleChange} />
           </div>
           <div className="submit-container">
-            <button type="submit" className="submit">{process === true ? "Prozess" : "Einloggen"}</button>
+            <button type="submit" className="submit">{process === true ? "Progress..." : "Einloggen"}</button>
             {successMsg && <h4>Benutzer eingeloggt</h4>}
           </div>
         </div>

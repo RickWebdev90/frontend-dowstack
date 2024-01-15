@@ -37,6 +37,7 @@ export default function PopupCreate() {
               <form>
                 <label>Art der Buchung</label>
                 <TypeInput type={type} setType={setType} />
+            
                 <label>Bezeichnung</label>
                 <input type="text" required placeholder="Titel" />
                 <label>Betrag</label>
