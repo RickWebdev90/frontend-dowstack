@@ -7,7 +7,7 @@ function isMongoDBObjectId(id) {
   );
 }
 
-function Income() {
+function Income({ trigger }) {
   const [incomeList, setIncomeList] = useState([]);
 
   useEffect(() => {
@@ -29,7 +29,8 @@ function Income() {
       }
     };
     fetchData();
-  }, []);
+  }, [trigger]);
+
   if (incomeList.length > 0) {
     const listOfIncome = incomeList?.map((item) => {
       console.log(item);

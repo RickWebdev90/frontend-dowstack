@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../../app.css";
 
-export default function CashFlowBalance() {
+export default function CashFlowBalance({trigger}) {
   const auth = sessionStorage.getItem("userid");
   const [balance, setBalance] = useState();
 
@@ -14,7 +14,7 @@ export default function CashFlowBalance() {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [trigger]);
 
   const fetchData = async () => {
     try {

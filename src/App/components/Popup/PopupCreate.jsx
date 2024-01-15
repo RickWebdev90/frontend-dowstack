@@ -7,7 +7,12 @@ import TitleInput from "../Inputs/TitleInput";
 import fetchBalance from "../user/UserBalance/Index";
 import { useState, useEffect } from "react";
 
-export default function PopupCreate() {
+export default function PopupCreate({trigger, setTrigger}) {
+
+  const [newExpense, setNewExpense]=useState({
+    type: "",
+    amount: ""
+  })
   const [type, setType] = useState("Expense");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
@@ -15,9 +20,10 @@ export default function PopupCreate() {
   const [date, setDate] = useState("");
   const [userBalance, setUserBalance] = useState("");
   const userId = sessionStorage.getItem("userid");
+  
   useEffect(() => {
     fetchBalance(setUserBalance);
-  }, []);
+  }, [trigger]);
 
   const updateBalance = async (boolean, amount, balance) => {
     const amountReformed = amount.replace(",", ".");
@@ -44,6 +50,8 @@ export default function PopupCreate() {
       );
       const data = await response.json();
       console.log("UPDATE BALANCE MSG:", data);
+      setTrigger(true)
+
     } catch (err) {
       console.log("creating Ticket failed!", err);
     }
@@ -73,7 +81,10 @@ export default function PopupCreate() {
         configCreate
       );
       const data = await response.json();
+      
+      if(data){setTrigger(true)}
       console.log("USER TICKER CREATION:", data);
+      
     } catch (err) {
       console.log("creating Ticket failed!", err);
     }

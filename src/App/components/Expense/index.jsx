@@ -6,7 +6,7 @@ function isMongoDBObjectId(id) {
     typeof id === "string" && id.length === 24 && /^[0-9a-fA-F]+$/.test(id)
   );
 }
-function ExpenseEntry() {
+function ExpenseEntry({trigger}) {
   const [expenseList, setExpenseList] = useState([]);
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
@@ -26,7 +26,7 @@ function ExpenseEntry() {
       }
     };
     fetchData();
-  }, []);
+  }, [trigger]);
   if (expenseList.length > 0) {
     const listOfExpenses = expenseList?.map((item) => {
       console.log(item);
