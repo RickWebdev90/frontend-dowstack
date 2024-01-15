@@ -448,3 +448,36 @@ a:link, a:visited{
     padding-right: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+
+.cashflow-modal {
+    background: white;
+  }
+
+.actions{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+}
+
+  .cashflow-modal > .close {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    line-height: 20px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #cfcece;
+  }
+
+  .cashflow-modal-container{
+    border: 1px solid black;
+    border-radius: 25px; 
+    background-color: white;
+    width: 600px;
+    display: flex;
+    
+  }
