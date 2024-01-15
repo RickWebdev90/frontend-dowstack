@@ -46,7 +46,7 @@ export default function PopupCreate() {
 
   return (
     <Popup
-      trigger={<button className="userSubmit delete"> ADD + </button>}
+      trigger={<button className="cashflow-add-button"> ADD ➕ </button>}
       modal
       nested
     >
@@ -58,16 +58,18 @@ export default function PopupCreate() {
             </button>
             <div className="cashflow-modal-container">
               <div className="header">
-                <h3>Create a new Entry ✨</h3>
+                <h3>Neuen Eintrag erstellen ✨</h3>
               </div>
-              <form onSubmit={(e) => e.preventDefault()}>
-                <TypeInput type={type} setType={setType} />
-                <TitleInput title={title} setTitle={setTitle} />
-                <CurrencyInput amount={amount} setAmount={setAmount} />
-                <RecurrInput recurr={recurr} setRecurr={setRecurr} />
-                <DateInput date={date} setDate={setDate} />
-                <button onClick={() => saveData(close)}>Speichern</button>
-              </form>
+              <div className="cashflow-popup-inputs">
+                <form onSubmit={(e) => e.preventDefault()}>
+                  <TypeInput type={type} setType={setType} />
+                  <TitleInput title={title} setTitle={setTitle} />
+                  <CurrencyInput amount={amount} setAmount={setAmount} />
+                  <RecurrInput recurr={recurr} setRecurr={setRecurr} />
+                  <DateInput date={date} setDate={setDate} />
+                  <button onClick={() => saveData(close)}>Speichern</button>
+                </form>
+              </div>
             </div>
           </div>
         );

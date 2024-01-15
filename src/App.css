@@ -4,6 +4,11 @@
 
 main {
     min-height: 80vh;
+    z-index: 1;
+}
+
+span{
+    font-weight: 900;
 }
 
 html, body {
@@ -56,6 +61,7 @@ ul {
     align-items: center;
     background-color: white;
     font-family: "Montserrat", sans-serif;
+
 }
 
 .header-navbar button{
@@ -118,7 +124,7 @@ a:link, a:visited{
 .dashboard-boxes{
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 3vh;
+    padding-bottom: 5vh;
 }
 .dashboard-balance{
      
@@ -186,8 +192,32 @@ a:link, a:visited{
     background-color: white;
 }
 
-.dashboard-dognutchart{
+.dashboard-calculator{
     display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    flex-direction: column;
+    width: 26vw;
+    height: 30vh;
+    font-size: large;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    margin: auto; 
+}
+
+.dashboard-expendes{
+    margin: auto;
+    
+}
+
+.dashboard-sektion-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+    padding-bottom: 20px;
 }
 
 .cashflow-header{
@@ -200,6 +230,7 @@ a:link, a:visited{
     justify-content: center;
     align-items: center;
     gap: 10px; 
+    font-family: "Montserrat", sans-serif;
 }
 
 .cashflow-monatsauswahl button{
@@ -214,6 +245,8 @@ a:link, a:visited{
     font-size: 3rem;
     text-align: center;
     background-color: white;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cashflow-title{
@@ -221,7 +254,6 @@ a:link, a:visited{
 }
 
 .cashflow-monat{
-    border: 1px solid black;
     border-radius: 10px;
     height: 40px;
     width: 200px;
@@ -229,6 +261,7 @@ a:link, a:visited{
     align-items: center;
     justify-content: center;
     background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cashflow-balance{
@@ -250,7 +283,41 @@ a:link, a:visited{
 
 .cashflow-section1{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+}
+
+.cashflow-income-container{
+    width: 65vw;
+    margin-left: 3vw;
+}
+
+.cashflow-balance-add-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
+}
+
+.cashflow-section2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vw;
+}
+
+.cashflow-Expenses{
+    width: 65vw;
+    margin-left: 3vw;
+    padding-bottom: 3vh;
+}
+
+.cashflow-placholder-expenses{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 30vw;
 }
 
 .expense-container{
@@ -450,7 +517,8 @@ a:link, a:visited{
 }
 
 .cashflow-modal {
-    background: white;
+    display: flex;
+    flex-direction: column;
   }
 
 .actions{
@@ -474,10 +542,50 @@ a:link, a:visited{
   }
 
   .cashflow-modal-container{
-    border: 1px solid black;
     border-radius: 25px; 
     background-color: white;
-    width: 600px;
-    display: flex;
-    
+    height: 20vh;
+    width: 80vw;
+    border: 2px solid black;
   }
+
+  .cashflow-popup-inputs form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: larger;
+}
+
+.cashflow-popup-inputs button{
+    border-radius: 25px;
+    font-size: large;
+    color: white;
+    background-color: #267bc6;
+}
+
+.cashflow-popup-inputs button:hover{
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: large;
+    color: black;
+    background-color: #267bc6;
+}
+
+.cashflow-popup-inputs input{
+    border-radius: 25px;
+}
+
+.cashflow-add-button{
+    background-color: #267bc6;
+    border-radius: 25px;
+    font-size: x-large;
+    color: white;
+    height: 8vh;
+    width: 10vw;
+}
+
+.cashflow-add-button:hover{
+    cursor: pointer;
+    background-color: #6EB636;
+}
