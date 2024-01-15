@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import IncomeCard from "./incomeCard";
+import IncomeCard from "./IncomeCard.jsx";
 
 function isMongoDBObjectId(id) {
   return (
@@ -7,7 +7,7 @@ function isMongoDBObjectId(id) {
   );
 }
 
-function IncomeEntry() {
+function Income() {
   const [incomeList, setIncomeList] = useState([]);
 
   useEffect(() => {
@@ -59,4 +59,4 @@ function IncomeEntry() {
     );
   }
 }
-export default IncomeEntry;
+export default Income;

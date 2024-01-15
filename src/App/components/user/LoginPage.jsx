@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUserContext } from "../../hooks/userContext.jsx";
 
-export default function Loginpage() {
+export default function LoginPage() {
   const [successMsg, setSuccessMsg] = useState();
   const [process, setProcess] = useState();
   const emailRef = useRef();

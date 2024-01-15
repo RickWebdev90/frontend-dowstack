@@ -1,7 +1,7 @@
 import React from 'react'
 import "./team.css"
 
-export default function Teamcard(props) {
+export default function TeamCard(props) {
   return (
     <div className='teamcard-container'>
       <div className="teamcard-img">

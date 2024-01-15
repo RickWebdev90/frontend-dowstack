@@ -1,12 +1,12 @@
 import React from 'react'
 import Title from './Title'
-import Sektion1 from './sektion1'
-import Sektion2 from './sektion2'
-import Sektion3 from './sektion3'
-import Sektion4 from './sektion4'
-import Sektion5 from './sektion5'
-import TeamSektion from './Team/teamSektion'
-import Registration from './Registration/Registration'
+import Sektion1 from './Sektion1.jsx'
+import Sektion2 from './Sektion2.jsx'
+import Sektion3 from './Sektion3.jsx'
+import Sektion4 from './Sektion4.jsx'
+import Sektion5 from './Sektion5.jsx'
+import TeamSektion from './Team/TeamSektion.jsx'
+import Registration from './Registration/Registration.jsx'
 
 export default function Homepage() {
   return (

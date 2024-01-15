@@ -1,18 +1,17 @@
-import React from "react";
-import Monatsauswahl from "./monatsauswahl";
+import MonatsAuswahl from "./MonatsAuswahl.jsx";
 import IncomeEntry from "../Income";
-import CashflowBalance from "./cashflowBalance";
+import CashFlowBalance from "./CashFlowBalance.jsx";
 import ExpenseEntry from "../Expense";
 import PopupCreate from "../Popup/PopupCreate";
 
-export default function Cashflow() {
+export default function CashFlow() {
   return (
     <div>
       <div className="cashflow-header">
         <div className="cashflow-title">
           <h1>Dein Cashflow</h1>
         </div>
-        <Monatsauswahl />
+        <MonatsAuswahl />
         <div></div>
         </div>
         <div className="cashflow-section1">
@@ -20,7 +19,7 @@ export default function Cashflow() {
           <IncomeEntry />
         </div>
         <div className="cashflow-balance">
-        <CashflowBalance />
+        <CashFlowBalance />
         <div className="cashflow-balance-placeholder">
         <PopupCreate />
         </div>

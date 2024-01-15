@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../loginpage.css";
 import PopupDelete from "./PopupDelete";
-import { useUserContext } from "../../../hooks/userContext";
 
-export default function Usersettings() {
+export default function UserSettings() {
   const [action, setAction] = useState(true);
   const auth = sessionStorage.getItem("userid");
 

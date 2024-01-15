@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
+import Header from "../components/Header/index.jsx";
+import Footer from "../components/Footer/index.jsx";
 import { Outlet } from "react-router-dom";
 import { UserProvider } from "../hooks/UserContext.jsx";
 

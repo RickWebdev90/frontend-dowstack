@@ -1,4 +1,4 @@
-import React from 'react';
+
 import DashBalance from './DashBalance.jsx';
 import "../../../app.css"
 import DashGoal from './DashGoal.jsx';
@@ -6,11 +6,9 @@ import DashPortfolio from './DashPortfolio.jsx';
 import BarChartCashflow from './BarChartCashflow.jsx';
 import DognutChartDashboard from './DognutChartDashboard.jsx';
 import ExpenseEntry from '../Expense';
-
-
 export default function Dashboard() {
-  const auth = sessionStorage.getItem("userid")
-  console.log("userid:", auth)
+  //const auth = sessionStorage.getItem("userid")
+
   return (
     <div>
       <h1>Dein Dashboard</h1>

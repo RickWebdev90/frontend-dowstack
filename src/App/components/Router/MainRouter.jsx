@@ -2,12 +2,12 @@ import { createBrowserRouter, createRoutesFromElements, Route } from 'react-rout
 import MainLayout from '../../layouts/MainLayout';
 import Homepage from '../../../Landingpage/Homepage';
 import Dashboard from '../dashboard/Dashboard';
-import Cashflow from '../cashflow/cashflow';
-import Portfolio from '../portfolio/portfolio';
-import Savinggoals from '../savinggoals/savinggoals';
-import Loginpage from '../user/loginpage';
-import Registration from '../../../Landingpage/Registration/registration';
-import Usersettings from '../user/Usersettings/usersettings';
+import Cashflow from '../cashflow/CashFlow.jsx';
+import Portfolio from '../portfolio/Portfolio.jsx';
+import Savinggoals from '../savinggoals/Savinggoals.jsx';
+import LoginPage from '../user/LoginPage.jsx';
+import Registration from '../../../Landingpage/Registration/Registration.jsx';
+import Usersettings from '../user/Usersettings/UserSettings.jsx';
 import NotFoundPage from '../NotFoundPage';
 import PopupDelete from '../user/Usersettings/PopupDelete';
 import ProtectedRoutes from './ProtectedRoutes';
@@ -16,7 +16,7 @@ export const AppRouter = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<MainLayout />}>
       <Route index element={<Homepage />} />
-      <Route path="login" element={<Loginpage />} />
+      <Route path="login" element={<LoginPage />} />
       <Route path="registration" element={<Registration />} />
       <Route element={<ProtectedRoutes user="authenticated" />}>
         <Route path="dashboard" element={<Dashboard />} />

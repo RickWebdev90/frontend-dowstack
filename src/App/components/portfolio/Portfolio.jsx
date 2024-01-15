@@ -1,6 +1,6 @@
 import React from 'react'
-import PortfolioBalance from './PortfolioBalance'
-import AssetsPortfolio from './AssetsPortfolio'
+import PortfolioBalance from './PortfolioBalance.jsx'
+import AssetsPortfolio from './AssetsPortfolio.jsx'
 import Calculator from './Calculator/Calculator'
 import PortfolioChart from './PortfolioChart'
 

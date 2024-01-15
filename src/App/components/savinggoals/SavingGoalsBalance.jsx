@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../../../app.css"
 
-export default function SavinggoalsBalance() {
+export default function SavingGoalsBalance() {
     const auth = sessionStorage.getItem("userid")
     const [balance, setBalance] = useState()
 

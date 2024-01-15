@@ -3,7 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import headerLogo from "../../assets/logo/DowStack_Logo_Color.svg";
 import { useUserContext } from "../../hooks/userContext";
 
-export default function Header() {
+export default function Index() {
   const { user } = useUserContext();
   const auth = sessionStorage.getItem("userid")
 

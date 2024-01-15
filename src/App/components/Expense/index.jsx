@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ExpenseCard from "./expenseCard";
+import ExpenseCard from "./ExpenseCard.jsx";
 
 function isMongoDBObjectId(id) {
   return (

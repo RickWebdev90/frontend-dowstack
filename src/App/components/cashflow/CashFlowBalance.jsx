@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../../../app.css"
 
-export default function CashflowBalance() {
+export default function CashFlowBalance() {
     const auth = sessionStorage.getItem("userid")
     const [balance, setBalance] = useState()
 

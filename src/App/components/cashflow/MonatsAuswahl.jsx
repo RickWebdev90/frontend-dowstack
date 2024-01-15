@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Monatsauswahl() {
+export default function MonatsAuswahl() {
   return (
     <div className="cashflow-monatsauswahl">
         <button>&#706;</button>
