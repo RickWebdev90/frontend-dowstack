@@ -123,22 +123,29 @@ a:link, a:visited{
 
 .dashboard-boxes{
     display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 5vh;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+}
+
+.dashboard-box-balance{
+    margin-left: 5vw;
+}
+
+.dashboard-box-portfolio{
+    margin-right: 5vw;
 }
 .dashboard-balance{
      
     background-color: #FCD112;
     border-radius: 25px;
+    height: 15vh;
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 20vw;
 }
 
 .dashboard-portfolio{
-
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -146,7 +153,7 @@ a:link, a:visited{
     justify-content: center;
     align-items: center;
     width: 20vw;
-    padding-top: -5px;
+    height: 15vh;
     background-color: white;
 }
 
@@ -154,18 +161,21 @@ a:link, a:visited{
     border-radius: 25px;
     background-color: #FCD112;
     display: flex;
-    padding: 0 60px;
+    width: 10vw;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2vh;
 }
 
 .dashboard-goal{
-     
     background-color: #6EB636;
     border-radius: 25px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 20vw;
+    width: 30vw;
+    height: 15vh;
 }
 
 .dashboard-charts{
@@ -176,6 +186,8 @@ a:link, a:visited{
 
 .dashboard-barchart-container{
     display: flex;
+    width: 60vw;
+    margin-left: 7.5vw;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
@@ -185,6 +197,8 @@ a:link, a:visited{
 
 .dashboard-dognutchart-container{
     display: flex;
+    margin-right: 7.5vw;
+    width: 20vw;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
@@ -196,20 +210,20 @@ a:link, a:visited{
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 10px;
     flex-direction: column;
-    width: 26vw;
-    height: 30vh;
+    margin-top: 3.5vh;
+    width: 21.5vw;
+    height: 50vh;
     font-size: large;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: white;
-    margin: auto; 
+    margin-right: 7vw;
 }
 
 .dashboard-expendes{
-    margin: auto;
-    
+    width: 60vw;
+    margin-left: 7vw;
 }
 
 .dashboard-sektion-container{
@@ -542,23 +556,43 @@ a:link, a:visited{
   }
 
   .cashflow-modal-container{
+    display: flex;
+    flex-direction: column;
     border-radius: 25px; 
     background-color: white;
-    height: 20vh;
+    height: auto; 
+    padding: 20px;
     width: 80vw;
     border: 2px solid black;
   }
 
   .cashflow-popup-inputs form{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-size: larger;
+    height: auto;
+}
+
+.cashflow-popup-inputs label{
+    padding: 5px; 
+}
+
+.input-wrapper{
+    margin-bottom: 10px;
+}
+
+.input-wrapper select{
+    height: 4vh;
+    text-align: center;
+    width: 7vw;
+    border-radius: 25px;
 }
 
 .cashflow-popup-inputs button{
     border-radius: 25px;
+    height: 5vh;
     font-size: large;
     color: white;
     background-color: #267bc6;
@@ -574,6 +608,8 @@ a:link, a:visited{
 
 .cashflow-popup-inputs input{
     border-radius: 25px;
+    height: 3vh;
+    width: 10vw;
 }
 
 .cashflow-add-button{

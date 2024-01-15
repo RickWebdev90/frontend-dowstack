@@ -18,8 +18,10 @@ const DateInput = ({ date, setDate }) => {
   }, []);
 
   return (
-    <div>
-      <input type="date" value={date} onChange={handleDateChange} />
+    <div className="popup-date">
+      <label>
+        <input type="date" value={date || ""} style={{height: "4vh"}} onChange={handleDateChange} />
+      </label>
     </div>
   );
 };
