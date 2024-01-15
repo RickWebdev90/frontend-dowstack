@@ -22,7 +22,6 @@ export default function PopupCreate() {
   const updateBalance = async (boolean, amount, balance) => {
     const amountReformed = amount.replace(",", ".");
     const amountAsFloat = parseFloat(amountReformed);
-    console.log(amountAsFloat);
     const updatedBalance =
       boolean === "Income" ? balance + amountAsFloat : balance - amountAsFloat;
     const newBalance = {
@@ -31,9 +30,6 @@ export default function PopupCreate() {
         balance: updatedBalance,
       },
     };
-    console.log("BOLEAN", boolean);
-    console.log("AMOUNT", typeof amountAsFloat);
-    console.log("USERAMOUNT", typeof updatedBalance);
     const configUpdate = {
       method: "PUT",
       headers: {
@@ -43,10 +39,9 @@ export default function PopupCreate() {
     };
     try {
       const response = await fetch(
-        "http://localhost:3001/users/settings",
+        "https://dowstack.onrender.com/users/settings",
         configUpdate
       );
-      console.log(response);
       const data = await response.json();
       console.log("UPDATE BALANCE MSG:", data);
     } catch (err) {
