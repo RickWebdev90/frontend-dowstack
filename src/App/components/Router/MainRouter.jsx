@@ -3,7 +3,7 @@ import { createBrowserRouter, createRoutesFromElements, Route } from 'react-rout
 import MainLayout from '../../layouts/MainLayout';
 import Homepage from '../../../Landingpage/Homepage';
 import Dashboard from '../Dashboard/Dashboard';
-import Cashflow from '../Cashflow/Cashflow';
+import Cashflow from '../cashflow/cashflow';
 import Portfolio from '../Portfolio/Portfolio';
 import Savinggoals from '../savinggoals/Savinggoals';
 import Loginpage from '../user/loginpage';
