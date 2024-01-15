@@ -1,16 +1,21 @@
 import Popup from "reactjs-popup";
-import CurrencyInput from "../CurrencyInput/Index";
-import DateInput from "../DateInput/Index";
+import CurrencyInput from "../Inputs/CurrencyInput";
+import DateInput from "../Inputs/DateInput";
+import TypeInput from "../Inputs/TypeInput";
+import RecurrInput from "../Inputs/RecurrInput";
 import { useState } from "react";
 
 export default function PopupCreate() {
-  const [type, setType] = useState(undefined);
-  const [title, setTitle] = useState(undefined);
-  const [amount, setAmount] = useState(undefined);
-  const [recurr, setRecurr] = useState(undefined);
-  const [date, setDate] = useState(undefined);
+  const [type, setType] = useState("Expense");
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [recurr, setRecurr] = useState(false);
+  const [date, setDate] = useState("");
   console.log("POPUP AMOUNT:", amount);
   console.log("POPUP DATE:", date);
+  console.log("POPUP TYPE", type);
+  console.log("POPUP TITLE", title);
+  console.log("POPUP RECURR", recurr);
 
   return (
     <Popup
@@ -30,16 +35,12 @@ export default function PopupCreate() {
               </div>
               <form>
                 <label>Art der Buchung</label>
-                <select>
-                  <option value="Expense">Ausgabe</option>
-                  <option value="Income">Einnahme</option>
-                </select>
+                <TypeInput type={type} setType={setType} />
                 <label>Bezeichnung</label>
                 <input type="text" required placeholder="Titel" />
                 <label>Betrag</label>
                 <CurrencyInput amount={amount} setAmount={setAmount} />
-                <label>Wiederkehrend?</label>
-                <input type="radio" />
+                <RecurrInput recurr={recurr} setRecurr={setRecurr} />
                 <DateInput date={date} setDate={setDate} />
                 <button>Speichern</button>
               </form>

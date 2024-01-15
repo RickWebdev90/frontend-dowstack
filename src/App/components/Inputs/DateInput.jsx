@@ -6,7 +6,7 @@ const DateInput = ({ date, setDate }) => {
   const formattedDate = `${year}-${month < 10 ? "0" + month : month}-${
     day < 10 ? "0" + day : day
   }`;
-  if (date === undefined) {
+  if (date === "") {
     setDate(formattedDate);
   }
   const handleDateChange = (event) => {
@@ -17,7 +17,7 @@ const DateInput = ({ date, setDate }) => {
     <div>
       <label>
         Datum:
-        <input type="date" value={date} onChange={handleDateChange} />
+        <input type="date" value={date || ""} onChange={handleDateChange} />
       </label>
     </div>
   );
