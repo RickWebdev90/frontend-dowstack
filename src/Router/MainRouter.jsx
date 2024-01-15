@@ -1,16 +1,16 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import MainLayout from '../../layouts/MainLayout.jsx';
-import Homepage from '../../../Landingpage/Homepage.jsx';
-import CashFlow from '../cashflow/CashFlow.jsx';
-import Portfolio from '../portfolio/Portfolio.jsx';
-import SavingGoals from '../savinggoals/SavingGoals.jsx';
-import LoginPage from '../user/LoginPage.jsx';
-import Registration from '../../../Landingpage/Registration/Registration.jsx';
-import UserSettings from '../user/Usersettings/UserSettings.jsx';
-import NotFoundPage from '../NotFoundPage.jsx';
-import PopupDelete from '../user/Usersettings/PopupDelete.jsx';
+import MainLayout from '../App/layouts/MainLayout.jsx';
+import Homepage from '../Landingpage/Homepage.jsx';
+import CashFlow from '../App/components/cashflow/CashFlow.jsx';
+import Portfolio from '../App/components/portfolio/Portfolio.jsx';
+import SavingGoals from '../App/components/savinggoals/SavingGoals.jsx';
+import LoginPage from '../App/components/user/LoginPage.jsx';
+import Registration from '../Landingpage/Registration/Registration.jsx';
+import UserSettings from '../App/components/user/Usersettings/UserSettings.jsx';
+import NotFoundPage from '../App/components/NotFoundPage.jsx';
+import PopupDelete from '../App/components/user/Usersettings/PopupDelete.jsx';
 import ProtectedRoutes from './ProtectedRoutes.jsx';
-import Dashboard from "../dashboard/Dashboard.jsx";
+import Dashboard from "../App/components/dashboard/Dashboard.jsx";
 
 export const AppRouter = createBrowserRouter(
   createRoutesFromElements(
