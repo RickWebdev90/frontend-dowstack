@@ -192,8 +192,22 @@
     margin-top:-2rem;
 }
 
-.usersettings-title{
-    margin-top: -0.5rem;
+.usersettings-container{
+    display: flex;
+    justify-content: center;
+}
+
+.usersettings{
+    border: 2px solid black;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 5px;
 }
 
 popup Bereich
