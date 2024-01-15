@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
+import deleteEntry from "../CRUD/DeleteEntry";
 
 const ExpenseCard = ({ _id, title, amount, recurring, date }) => {
   const rawDate = date;
@@ -18,7 +19,9 @@ const ExpenseCard = ({ _id, title, amount, recurring, date }) => {
         <div className="ExpenseDate">{formatDate}</div>
         <button
           className="ExpenseButton"
-          onClick={() => console.log("Delete Entry with ID: ", entryId)}
+          onClick={() => {
+            deleteEntry(entryId, "Expense");
+          }}
         >
           Löschen
         </button>
