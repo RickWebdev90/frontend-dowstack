@@ -2,15 +2,15 @@ import React from 'react';
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
 import MainLayout from '../../layouts/MainLayout';
 import Homepage from '../../../Landingpage/Homepage';
-import Dashboard from '../Dashboard/Dashboard';
+import Dashboard from '../dashboard/dashboard';
 import Cashflow from '../cashflow/cashflow';
-import Portfolio from '../Portfolio/Portfolio';
-import Savinggoals from '../savinggoals/Savinggoals';
+import Portfolio from '../portfolio/portfolio';
+import Savinggoals from '../savinggoals/savinggoals';
 import Loginpage from '../user/loginpage';
-import Registration from '../../../Landingpage/Registration/Registration';
-import Usersettings from '../User/Usersettings/usersettings';
+import Registration from '../../../Landingpage/Registration/registration';
+import Usersettings from '../user/Usersettings/usersettings';
 import NotFoundPage from '../NotFoundPage';
-import PopupDelete from '../User/Usersettings/PopupDelete';
+import PopupDelete from '../user/Usersettings/PopupDelete';
 import ProtectedRoutes from './ProtectedRoutes';
 
 const AppRouter = createBrowserRouter(
