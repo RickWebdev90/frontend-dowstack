@@ -1,7 +1,7 @@
 import React from 'react'
 import SavingGoalsBalance from './SavingGoalsBalance.jsx'
 
-export default function Savinggoals() {
+export default function SavingGoals() {
   return (
     <div>
       <div className="sparziele-title">

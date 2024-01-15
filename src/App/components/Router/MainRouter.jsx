@@ -1,16 +1,16 @@
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom';
-import MainLayout from '../../layouts/MainLayout';
-import Homepage from '../../../Landingpage/Homepage';
-import Dashboard from '../dashboard/Dashboard';
-import Cashflow from '../cashflow/CashFlow.jsx';
+import MainLayout from '../../layouts/MainLayout.jsx';
+import Homepage from '../../../Landingpage/Homepage.jsx';
+import CashFlow from '../cashflow/CashFlow.jsx';
 import Portfolio from '../portfolio/Portfolio.jsx';
-import Savinggoals from '../savinggoals/Savinggoals.jsx';
+import SavingGoals from '../savinggoals/SavingGoals.jsx';
 import LoginPage from '../user/LoginPage.jsx';
 import Registration from '../../../Landingpage/Registration/Registration.jsx';
-import Usersettings from '../user/Usersettings/UserSettings.jsx';
-import NotFoundPage from '../NotFoundPage';
-import PopupDelete from '../user/Usersettings/PopupDelete';
-import ProtectedRoutes from './ProtectedRoutes';
+import UserSettings from '../user/Usersettings/UserSettings.jsx';
+import NotFoundPage from '../NotFoundPage.jsx';
+import PopupDelete from '../user/Usersettings/PopupDelete.jsx';
+import ProtectedRoutes from './ProtectedRoutes.jsx';
+import Dashboard from "../dashboard/Dashboard.jsx";
 
 export const AppRouter = createBrowserRouter(
   createRoutesFromElements(
@@ -20,10 +20,10 @@ export const AppRouter = createBrowserRouter(
       <Route path="registration" element={<Registration />} />
       <Route element={<ProtectedRoutes user="authenticated" />}>
         <Route path="dashboard" element={<Dashboard />} />
-        <Route path="cashflow" element={<Cashflow />} />
+        <Route path="cashflow" element={<CashFlow />} />
         <Route path="portfolio" element={<Portfolio />} />
-        <Route path="savinggoals" element={<Savinggoals />} />
-        <Route path="usersettings" element={<Usersettings />} />
+        <Route path="savinggoals" element={<SavingGoals />} />
+        <Route path="usersettings" element={<UserSettings />} />
         <Route path="usersettings/delete" element={<PopupDelete />} />
       </Route>
       <Route path="*" element={<NotFoundPage />} />
