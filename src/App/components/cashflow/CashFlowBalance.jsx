@@ -35,7 +35,9 @@ export default function CashFlowBalance({ trigger }) {
 
   return (
     <div className="dashboard-balance app-boxshadow">
-      <h2>Du hast diesen Monat noch {balance}€</h2>
+      <h2>
+        Du hast diesen Monat noch {typeof balance !== "number" ? 0 : balance}€
+      </h2>
     </div>
   );
 }
