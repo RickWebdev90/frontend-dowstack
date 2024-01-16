@@ -3,7 +3,15 @@ import { format } from "date-fns";
 import deleteEntry from "../CRUD/DeleteEntry";
 import updateBalance from "../CRUD/UpdateBalance";
 
-const ExpenseCard = ({ _id, title, amount, recurring, date }) => {
+const ExpenseCard = ({
+  trigger,
+  setTrigger,
+  _id,
+  title,
+  amount,
+  recurring,
+  date,
+}) => {
   const rawDate = date;
   const parsedDate = new Date(rawDate);
   const formatDate = format(parsedDate, "dd.MM.yyyy");
@@ -22,7 +30,7 @@ const ExpenseCard = ({ _id, title, amount, recurring, date }) => {
         <button
           className="ExpenseButton"
           onClick={() => {
-            deleteEntry(entryId, "false");
+            deleteEntry(trigger, setTrigger, entryId, "false");
             updateBalance(userId, "true", amount);
           }}
         >

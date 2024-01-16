@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../../../app.css";
 
-export default function CashFlowBalance() {
+export default function CashFlowBalance({ trigger }) {
   const auth = sessionStorage.getItem("userid");
   const [balance, setBalance] = useState();
 
@@ -13,23 +13,26 @@ export default function CashFlowBalance() {
   };
 
   useEffect(() => {
+    console.log("TRIGGER IN BALANCE KOMP WIRD GEPULLT BRUDI");
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          `https://dowstack.onrender.com/users/${auth}`,
+          config
+        );
+        const data = await response.json();
+        console.log("data balance in BALANCE", data.balance);
+        setBalance(data.balance);
+        // setTrigger(!trigger);
+        // console.log("balance", data.balance);
+        console.log("BALANCETRIGGER:", trigger, balance);
+      } catch (err) {
+        console.log("irgendwas stimmt nicht", err);
+      }
+    };
     fetchData();
-  }, []);
+  }, [trigger]);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        `https://dowstack.onrender.com/users/${auth}`,
-        config
-      );
-      const data = await response.json();
-      // console.log("data", data)
-      setBalance(data.balance);
-      // console.log("balance", data.balance)
-    } catch (err) {
-      console.log("irgendwas stimmt nicht", err);
-    }
-  };
   return (
     <div className="dashboard-balance app-boxshadow">
       <h2>Du hast diesen Monat noch {balance}€</h2>

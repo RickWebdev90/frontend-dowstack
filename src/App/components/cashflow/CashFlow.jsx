@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function CashFlow() {
   const [trigger, setTrigger] = useState(false);
+  // console.log("CASHFLOW TRIGGER:", trigger);
   return (
     <div>
       <div className="cashflow-header">
@@ -18,11 +19,11 @@ export default function CashFlow() {
       </div>
       <div className="cashflow-section1">
         <div className="cashflow-income-container">
-          <IncomeEntry trigger={trigger} />
+          <IncomeEntry setTrigger={setTrigger} trigger={trigger} />
         </div>
         <div className="cashflow-balance-add-container">
           <div className="cashflow-balance">
-            <CashFlowBalance />
+            <CashFlowBalance setTrigger={setTrigger} trigger={trigger} />
           </div>
           <div className="cashflow-balance-placeholder">
             <PopupCreate setTrigger={setTrigger} trigger={trigger} />
@@ -31,7 +32,7 @@ export default function CashFlow() {
       </div>
       <div className="cashflow-section2">
         <div className="cashflow-Expenses">
-          <ExpenseEntry trigger={trigger} />
+          <ExpenseEntry setTrigger={setTrigger} trigger={trigger} />
         </div>
         <div className="cashflow-placholder-expenses"></div>
       </div>

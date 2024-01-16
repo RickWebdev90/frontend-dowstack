@@ -3,7 +3,15 @@ import { format } from "date-fns";
 import deleteEntry from "../CRUD/DeleteEntry";
 import updateBalance from "../CRUD/UpdateBalance";
 
-const IncomeCard = ({ _id, title, amount, recurring, date }) => {
+const IncomeCard = ({
+  trigger,
+  setTrigger,
+  _id,
+  title,
+  amount,
+  recurring,
+  date,
+}) => {
   const rawDate = date;
   const parsedDate = new Date(rawDate);
   const formatDate = format(parsedDate, "dd.MM.yyyy");
@@ -22,8 +30,7 @@ const IncomeCard = ({ _id, title, amount, recurring, date }) => {
         <button
           className="IncomeButton"
           onClick={() => {
-            deleteEntry(entryId, "true");
-            console.log("INCOME CARD userid,amount", userId, amount);
+            deleteEntry(trigger, setTrigger, entryId, "true");
             updateBalance(userId, "false", amount);
           }}
         >

@@ -4,12 +4,12 @@ import DateInput from "../Inputs/DateInput";
 import TypeInput from "../Inputs/TypeInput";
 import RecurrInput from "../Inputs/RecurrInput";
 import TitleInput from "../Inputs/TitleInput";
-import fetchBalance from "../user/UserBalance/Index";
+// import fetchBalance from "../user/UserBalance/Index";
 import updateBalance from "../CRUD/UpdateBalance";
 import { useState, useEffect } from "react";
 
-export default function PopupCreate() {
-  const [type, setType] = useState(false);
+export default function PopupCreate({ trigger, setTrigger }) {
+  const [type, setType] = useState("false");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
   const [recurr, setRecurr] = useState(false);
@@ -18,40 +18,10 @@ export default function PopupCreate() {
   const userId = sessionStorage.getItem("userid");
   useEffect(() => {
     // fetchBalance(setUserBalance);
-  }, []);
-
-  // const updateBalance = async (boolean, amount, balance) => {
-  //   const amountReformed = amount.replace(",", ".");
-  //   const amountAsFloat = parseFloat(amountReformed);
-  //   const updatedBalance =
-  //     boolean === "Income" ? balance + amountAsFloat : balance - amountAsFloat;
-  //   const newBalance = {
-  //     userId: userId,
-  //     updateData: {
-  //       balance: updatedBalance,
-  //     },
-  //   };
-  //   const configUpdate = {
-  //     method: "PUT",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(newBalance),
-  //   };
-  //   try {
-  //     const response = await fetch(
-  //       "https://dowstack.onrender.com/users/settings",
-  //       configUpdate
-  //     );
-  //     const data = await response.json();
-  //     console.log("UPDATE BALANCE MSG:", data);
-  //   } catch (err) {
-  //     console.log("creating Ticket failed!", err);
-  //   }
-  // };
+  }, [trigger]);
 
   const saveData = async (c) => {
-    const URLRoute = type === false ? "out" : "in";
+    const URLRoute = type === "false" ? "out" : "in";
     const amountReformed = amount.replace(",", ".");
     const amountAsFloat = parseFloat(amountReformed);
     const newEntry = {
@@ -74,7 +44,9 @@ export default function PopupCreate() {
         configCreate
       );
       const data = await response.json();
-      console.log("USER TICKER CREATION:", data);
+      console.log("SAVEDDATA:", data);
+      console.log("saved TYPE: ", type);
+      setTrigger(!trigger);
     } catch (err) {
       console.log("creating Ticket failed!", err);
     }
@@ -83,7 +55,7 @@ export default function PopupCreate() {
 
   return (
     <Popup
-      trigger={<button className="cashflow-add-button"> ADD ➕ </button>}
+      trigger={<button className="cashflow-add-button"> ADD + </button>}
       modal
       nested
     >
@@ -107,7 +79,6 @@ export default function PopupCreate() {
                   <button
                     onClick={() => {
                       saveData(close);
-                      console.log(typeof type, type);
                       updateBalance(userId, type, amount);
                     }}
                   >
