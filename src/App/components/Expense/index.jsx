@@ -8,6 +8,7 @@ function isMongoDBObjectId(id) {
 }
 function ExpenseEntry({ trigger, setTrigger }) {
   const [expenseList, setExpenseList] = useState([]);
+  const path = window.location.pathname
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
     // console.log("USERID:", userId);
@@ -28,7 +29,8 @@ function ExpenseEntry({ trigger, setTrigger }) {
     fetchData();
   }, [trigger]);
   if (expenseList.length > 0) {
-    const listOfExpenses = expenseList?.map((item) => {
+    const useList=path==="/dashboard"? expenseList?.slice(0, 4) : expenseList
+    const listOfExpenses = useList?.map((item) => {
       console.log(item);
       return (
         <div key={item._id}>
