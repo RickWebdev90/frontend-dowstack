@@ -32,7 +32,6 @@ function Income({ trigger, setTrigger }) {
   }, [trigger]);
   if (incomeList.length > 0) {
     const listOfIncome = incomeList?.map((item) => {
-      // console.log(item);
       return (
         <div key={item._id}>
           <IncomeCard

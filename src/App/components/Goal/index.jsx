@@ -15,7 +15,7 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
       try {
         if (isMongoDBObjectId(userId)) {
           const response = await fetch(
-            `https://dowstack.onrender.com/out/user/${userId}`
+            `https://dowstack.onrender.com/savinggoals/user/${userId}`
           );
           const data = await response.json();
           // console.log("EXPENSE DATA 💸", data);

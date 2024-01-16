@@ -1,4 +1,4 @@
-const StartInput = ({ start, setStart }) => {
+const StartInput = ({ balance, setBalance }) => {
     const handleInputChange = (event) => {
       const inputValue = event.target.value;
       const regex = /^\d*\,?\d{0,2}$/;
@@ -12,7 +12,7 @@ const StartInput = ({ start, setStart }) => {
         <label>Bereits gespart</label>
         <input
           type="text"
-          value={start}
+          value={balance}
           onChange={handleInputChange}
           placeholder="€"
         />
