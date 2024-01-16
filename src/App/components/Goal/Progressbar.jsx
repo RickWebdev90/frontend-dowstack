@@ -1,7 +1,7 @@
 import React from "react";
 
-const ProgressBar = ({ current, target }) => {
-  const percentage = (current / target) * 100;
+const ProgressBar = ({ balance, goal }) => {
+  const percentage = (balance / goal) * 100;
   return (
     <div
       style={{

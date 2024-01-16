@@ -26,7 +26,7 @@ export default function CashFlow() {
             <CashFlowBalance setTrigger={setTrigger} trigger={trigger} />
           </div>
           <div className="cashflow-balance-placeholder">
-            <PopupCreate setTrigger={setTrigger} trigger={trigger} />
+            <PopupCreate setTrigger={setTrigger} trigger={trigger} usage="cashflow" />
           </div>
         </div>
       </div>
