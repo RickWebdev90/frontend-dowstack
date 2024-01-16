@@ -20,7 +20,12 @@ const DateInput = ({ date, setDate }) => {
   return (
     <div className="popup-date">
       <label>
-        <input type="date" value={date || ""} style={{height: "4vh"}} onChange={handleDateChange} />
+        <input
+          type="date"
+          value={date || ""}
+          style={{ height: "4vh" }}
+          onChange={handleDateChange}
+        />
       </label>
     </div>
   );

@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
-import deleteSavingGoalEntry from "../CRUD/DeleteSavingGoalEntry";  //anpassen für SavingGoals (Kopie)
-import updateBalance from "../CRUD/UpdateBalance";
+import { useEffect } from "react";
+import deleteSavingGoalEntry from "../CRUD/DeleteSavingGoalEntry"; //anpassen für SavingGoals (Kopie)
 import ProgressBar from "./Progressbar";
 import PopupCreate from "../Popup/PopupCreate";
 
@@ -12,27 +11,27 @@ const SavingGoalsCard = ({
   balance,
   goal,
 }) => {
-  const userId = sessionStorage.getItem("userid");
-  const [entryId, setEntryId] = useState("");
-  useEffect(() => {
-    setEntryId(_id);
-  }, []);
+  useEffect(() => {}, [trigger]);
   return (
     <>
       <div className="SavingGoalEntry">
         <div className="SavingGoalTitle">{title}</div>
-        <ProgressBar balance={balance} target={goal}/>
+        <ProgressBar balance={balance} goal={goal} />
         <div className="SavingGoalCurrentSaving">{`${balance} €`}</div>
         <div className="SavingGoalTarget">{`${goal}`}</div>
-       
-            <PopupCreate setTrigger={setTrigger} trigger={trigger} usage="savingGoalsUpdate"/>
-  
-    
+
+        <PopupCreate
+          setTrigger={setTrigger}
+          trigger={trigger}
+          usage="savingGoalsUpdate"
+          optionalData={{ id: _id, balance: balance }}
+        />
+
         <button
           className="savinggoal-DeleteButton"
           onClick={() => {
-            deleteEntry(trigger, setTrigger, entryId, "false");
-            updateBalance(userId, "true", amount);
+            deleteSavingGoalEntry(trigger, setTrigger, _id);
+            console.log("DELETEBUTTON GOALS:", _id);
           }}
         >
           Löschen
