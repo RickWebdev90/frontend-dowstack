@@ -115,6 +115,7 @@ a:link, a:visited{
 
 .headerLogo {
     max-width: 100px;
+    height: 100px;
     padding-left: 12rem;
 }
 .app-boxshadow{
