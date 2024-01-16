@@ -16,16 +16,9 @@ export default function Index() {
   return (
     <header>
       <nav className="header-navbar">
-        <img src={headerLogo} alt="logo" className="headerLogo" />
+        <a href="/"><img src={headerLogo} alt="logo" className="headerLogo" /></a>
         <ul className="nav-header-links">
-          <NavLink
-            to="/"
-            style={({ isActive }) => ({
-              color: isActive ? "#6EB636" : "black",
-            })}
-          >
-            <li className="nav-header-item">Hompage</li>
-          </NavLink>
+          
           {user || auth != null ? <UserNavigation /> : null}
         </ul> 
         
