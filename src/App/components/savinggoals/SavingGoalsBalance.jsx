@@ -29,7 +29,7 @@ export default function SavingGoalsBalance() {
     }
     }; 
   return (
-    <div className='dashboard-balance app-boxshadow'>
+    <div className='SavingGoals-Balance'>
       <h2>Du hast diesen Monat noch {balance}€</h2>
     </div>
   )
