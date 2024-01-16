@@ -9,8 +9,8 @@ const TypeInput = ({ type, setType }) => {
           console.log("TYPEINPUT:", e.target.value, typeof e.target.value);
         }}
       >
-        <option value={false}>Ausgabe</option>
-        <option value={true}>Einnahme</option>
+        <option value={"false"}>Ausgabe</option>
+        <option value={"true"}>Einnahme</option>
       </select>
     </div>
   );

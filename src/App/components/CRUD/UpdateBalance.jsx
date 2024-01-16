@@ -23,7 +23,7 @@ const updateBalance = async (userId, boolean, amount) => {
   const newBalance = {
     userId: userId,
     updateData: {
-      balance: updatedBalance,
+      balance: updatedBalance === null ? 0 : updatedBalance,
     },
   };
   console.log("NEWBALANCE", newBalance);
