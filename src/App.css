@@ -458,6 +458,12 @@ a:link, a:visited{
     color: white;
 }
 
+.SavingGoals-Add-Button{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
 .savinggoal-EntryButton:hover{
     cursor: pointer;
     color: black;
