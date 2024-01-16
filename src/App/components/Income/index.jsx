@@ -30,8 +30,13 @@ function Income({ trigger, setTrigger }) {
     };
     fetchData();
   }, [trigger]);
+
+  
   if (incomeList.length > 0) {
+    console.log("incoming list", incomeList)
     const listOfIncome = incomeList?.map((item) => {
+
+    
       return (
         <div key={item._id}>
           <IncomeCard
@@ -45,7 +50,7 @@ function Income({ trigger, setTrigger }) {
           />
         </div>
       );
-    });
+    }); 
     return (
       <div className="Income-Cashflow-Container">
         <h1>💰Einnahmen💰</h1>
