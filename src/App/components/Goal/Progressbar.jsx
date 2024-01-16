@@ -21,5 +21,4 @@ const ProgressBar = ({ balance, goal }) => {
     </div>
   );
 };
-
 export default ProgressBar;

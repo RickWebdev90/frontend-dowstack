@@ -9,11 +9,16 @@ import StartInput from "../Inputs/StartGoalInput";
 import updateBalance from "../CRUD/UpdateBalance";
 import { useState, useEffect } from "react";
 
-export default function PopupCreate({ trigger, setTrigger, usage }) {
+export default function PopupCreate({
+  trigger,
+  setTrigger,
+  usage,
+  optionalData = "",
+}) {
   const [type, setType] = useState("false");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
-  const [recurr, setRecurr] = useState("false");
+  const [recurr, setRecurr] = useState(false);
   const [date, setDate] = useState("");
   const [value, setValue] = useState("");
   const [balance, setBalance] = useState("");
@@ -26,7 +31,6 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
   const amountReformed = amount.replace(",", ".");
   const amountAsFloat = parseFloat(amountReformed);
 
-  //switch for handling usage of popup
   let usedHandler;
   let usedRoute;
   let newEntry;
@@ -36,17 +40,6 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
     case "savingGoals":
       (usedHandler = handleSavings), (usedRoute = "savinggoals");
       method = "POST";
-      newEntry = {
-        user_id: userId,
-        title: title,
-        creationDate: date,
-        balance: balance,
-        goal: goal,
-      };
-      break;
-    case "savingGoalsUpdate":
-      (usedHandler = handleSavingsUpdate), (usedRoute = "savinggoals");
-      method = "PUT";
       newEntry = {
         user_id: userId,
         title: title,
@@ -65,35 +58,20 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
         recurring: recurr,
       };
       break;
-    case "assets":
-      (usedHandler = handleAssets), (usedRoute = "/assets"), (method = "POST");
+    case "savingGoalsUpdate":
+      (usedHandler = handleSavingsUpdate), (usedRoute = "savinggoals");
+      method = "PUT";
       newEntry = {
-        user_id: userId,
-        title: title,
-        creationDate: date,
-        value: value,
-      };
-      break;
-    case "assetsUpdate":
-      (usedHandler = handleAssetsUpdate),
-        (usedRoute = "/assets"),
-        (method = "PUT");
-      newEntry = {
-        user_id: userId,
-        title: title,
-        creationDate: date,
-        value: value,
+        _id: optionalData.id,
+        updateData: {
+          balance: optionalData.balance + amountAsFloat,
+        },
       };
       break;
     default:
       console.log("no usage ");
   }
-  //  console.log("handle", usedHandler)
-  //  console.log("route", usedRoute)
-  //  console.log("newEntry", newEntry)
   const saveData = async (close) => {
-    console.log("usedRoute in func", usedRoute);
-
     const configCreate = {
       method: method,
       headers: {
@@ -101,48 +79,30 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
       },
       body: JSON.stringify(newEntry),
     };
-    console.log(`https://dowstack.onrender.com/${usedRoute}`, configCreate);
     try {
       const response = await fetch(
         `https://dowstack.onrender.com/${usedRoute}`,
         configCreate
       );
-      const data = await response.json();
-      console.log("SAVEDDATA:", data);
-      console.log("saved TYPE: ", type);
+      await response.json();
       setTrigger(!trigger);
     } catch (err) {
-      console.log("creating Ticket failed!", err);
+      console.log("Saving Data failed❗️", err);
     }
     close();
   };
 
-  function handleCashFlow() {
+  function handleCashFlow(close) {
     saveData(close);
     updateBalance(userId, type, amount);
   }
-
-  function handleSavings() {
+  function handleSavings(close) {
     saveData(close);
-    console.log("savings handled");
+  }
+  function handleSavingsUpdate(close) {
+    saveData(close);
   }
 
-  function handleSavingsUpdate() {
-    saveData(close);
-    updateBalance(userId, type, amount);
-    console.log("savings handled");
-  }
-
-  function handleAssets() {
-    saveData(close);
-    console.log("assets handled");
-  }
-
-  function handleAssetsUpdate() {
-    saveData(close);
-    updateBalance(userId, type, amount);
-    console.log("savings handled");
-  }
   const custom = {
     className:
       usage === "savingGoalsUpdate"
@@ -172,30 +132,30 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
                   {usage === "cashflow" ? (
                     <TypeInput type={type} setType={setType} />
                   ) : null}
-
-                  {usage === "savingGoalsUpdate" ? null : (
+                  {usage === "cashflow" ? (
                     <TitleInput title={title} setTitle={setTitle} />
-                  )}
-
+                  ) : null}
                   {usage === "savingGoals" ? (
-                    <StartInput start={balance} setStart={setBalance} />
+                    <TitleInput title={title} setTitle={setTitle} />
+                  ) : null}
+                  {usage === "savingGoals" ? (
+                    <StartInput balance={balance} setBalance={setBalance} />
                   ) : (
                     <CurrencyInput amount={amount} setAmount={setAmount} />
                   )}
-
-                  {usage === "savingGoals" ? (
-                    <GoalInput goal={goal} setGoal={setGoal} />
-                  ) : null}
-
                   {usage === "cashflow" ? (
                     <RecurrInput recurr={recurr} setRecurr={setRecurr} />
                   ) : null}
-
-                  {usage === "savingGoals" ? null : (
+                  {usage === "cashflow" ? (
                     <DateInput date={date} setDate={setDate} />
-                  )}
-
-                  <button onClick={usedHandler}>Speichern</button>
+                  ) : null}
+                  {usage === "savingGoals" ? (
+                    <GoalInput goal={goal} setGoal={setGoal} />
+                  ) : null}
+                  {usage === "savingGoals" ? (
+                    <DateInput date={date} setDate={setDate} />
+                  ) : null}
+                  <button onClick={() => usedHandler(close)}>Speichern</button>
                 </form>
               </div>
             </div>

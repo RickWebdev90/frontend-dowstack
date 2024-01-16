@@ -10,7 +10,6 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
   const [savingGoalsList, setSavingGoalsList] = useState([]);
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
-    // console.log("USERID:", userId);
     const fetchData = async () => {
       try {
         if (isMongoDBObjectId(userId)) {
@@ -46,15 +45,15 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
     return (
       <div className="SavingGoals-Container">
         <div className="SavingGoals-Titel-Container">
-        <h1>🏁 Deine aktuellen Sparziele 🏁</h1>
+          <h1>🏁 Deine aktuellen Sparziele 🏁</h1>
         </div>
         <div className="SavingGoals-Spaltentitel">
-        <div>Name</div>
-        <div>Progress</div>
-        <div>Erspartes</div>
-        <div>Sparziel</div>
-        <div></div>
-        <div></div>
+          <div>Name</div>
+          <div>Progress</div>
+          <div>Erspartes</div>
+          <div>Sparziel</div>
+          <div></div>
+          <div></div>
         </div>
         <ul>{listOfSavingGoals}</ul>
       </div>
