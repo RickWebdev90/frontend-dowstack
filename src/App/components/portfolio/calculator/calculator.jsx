@@ -40,7 +40,7 @@ export default function Calculator() {
     <div>
       <div className="calculator-container">
         <div className="calculator-title">
-          <h1>Vermögensrechner (Millionärsrechner)</h1>
+          <h1>Dein Vermögensrechner (Millionärsrechner)</h1>
         </div>
         <form className="calculatorformular" onSubmit={(e) => e.preventDefault()}>
           <div className="calculator-inputs">
