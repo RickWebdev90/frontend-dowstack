@@ -10,13 +10,13 @@ export default function CashFlow() {
   // console.log("CASHFLOW TRIGGER:", trigger);
   return (
     <div>
-      <div className="cashflow-header">
+      {/* <div className="cashflow-header"> */}
         <div className="cashflow-title">
           <h1>Dein Cashflow</h1>
         </div>
-        <MonatsAuswahl />
-        <div></div>
-      </div>
+        {/* <MonatsAuswahl /> */}
+       {/*  <div></div>
+      </div> */}
       <div className="cashflow-section1">
         <div className="cashflow-income-container">
           <IncomeEntry setTrigger={setTrigger} trigger={trigger} />
