@@ -1,5 +1,5 @@
 .teamsektion{
-    background-color: #6EB636;
+    background-color: #267BC6;
 }
 
 .teamtitle{
@@ -14,7 +14,7 @@
     gap: 4rem; 
 }
 .teamcard-container{
-    background-color: #267BC6;
+    background-color: white;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -30,14 +30,14 @@
 
 .teamcard-img img{
     border-radius: 50%;
-    border: 5px solid #6EB636;
+    border: 5px solid #FCD112;
     max-height: 250px; 
     margin-top: 2rem;
 }
 
 .teamcard-text{
-    color: white;
     font-size: large;
+    font-weight: 700;
 }
 
 .teamcard-name{
