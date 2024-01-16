@@ -37,8 +37,8 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
             setTrigger={setTrigger}
             _id={item._id}
             title={item.title}
-            current={item.current}
-            target={item.target}
+            balance={item.balance}
+            goal={item.goal}
           />
         </div>
       );
