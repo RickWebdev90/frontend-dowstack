@@ -3,7 +3,7 @@
 }
 
 main {
-    min-height: 80vh;
+    min-height: 78vh;
     z-index: 1;
 }
 
@@ -339,16 +339,147 @@ a:link, a:visited{
     justify-content: flex-start
 }
 
-.sparziele-balance{
-    display: flex;
-    justify-content: center;
-}
 
 .portfolio-header{
     display: flex;
     justify-content: space-evenly;
     height: 35vh;
     padding-bottom: 5vh;
+}
+
+.SavingGoals-Page{
+    display: flex;
+    flex-direction: column;
+    min-height: 82vh;
+}
+
+.SavingGoals-Balance-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+.SavingGoals-Balance{
+    width: 30vw;
+    height: 10vh;
+    background-color: #FCD112;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.SavingGoals-Container-Page{
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    min-height: 30vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw; 
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.SavingGoals-Spaltentitel{
+    display: grid;
+    grid-template-columns: repeat(6, 0.75fr);
+    grid-template-rows: repeat(1, 1fr);
+    font-size: x-large;
+    font-weight: 700;
+    padding: 5px;
+    margin-left: 5vw; 
+    font-family: "Montserrat", sans-serif;
+}
+
+.SavingGoalEntry{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 15px;
+    width: 85vw;
+}
+
+.SavingGoals-Titel-Container{
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+}
+
+.SavingGoalTitle{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.SavingGoalCurrentSaving{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.SavingGoalTarget{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(242, 241, 241);
+}
+
+.savinggoal-EntryButton{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none; 
+    background-color: #6EB636;
+    color: white;
+}
+
+.savinggoal-EntryButton:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.savinggoal-DeleteButton{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 2rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    background-color: #FF3F49;
+    color: white;
+}
+
+.savinggoal-DeleteButton:hover{
+    cursor: pointer;
+    color: black;
 }
 
 .portfolio-chart{
@@ -375,7 +506,6 @@ a:link, a:visited{
     grid-template-columns: repeat(5, 1.25fr);
     grid-template-rows: repeat(3, 0.5fr);
     grid-column-gap: 15px;
-    
 }
 
 .ExpenseTitle{
@@ -435,7 +565,14 @@ a:link, a:visited{
     height: 2rem;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+    border: none; 
+    background-color: #FF3F49;
+    color: white;
+}
+
+.ExpenseButton:hover{
+    cursor: pointer;
+    color: black;
 }
 
 .Expense-Cashflow-Container{
@@ -515,7 +652,14 @@ a:link, a:visited{
     height: 2rem;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+    border: none; 
+    background-color: #FF3F49;
+    color: white;
+}
+
+.IncomeButton:hover{
+    cursor: pointer;
+    color: black;
 }
 
 .Income-Cashflow-Container{
