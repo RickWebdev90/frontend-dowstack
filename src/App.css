@@ -124,8 +124,14 @@ a:link, a:visited{
 
 .dashboard-boxes{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 5vw;
     margin-bottom: 2vh;
+    margin-left: -1vw;
+}
+
+.dashboard-title{
+    margin-left: 4vw;
 }
 
 .dashboard-box-balance{
@@ -181,14 +187,15 @@ a:link, a:visited{
 
 .dashboard-charts{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    width: 100vw;
+    gap: 3.5vw
 }
 
 .dashboard-barchart-container{
     display: flex;
     width: 60vw;
-    margin-left: 7.5vw;
+    margin-left: 3.5vw;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
@@ -198,7 +205,7 @@ a:link, a:visited{
 
 .dashboard-dognutchart-container{
     display: flex;
-    margin-right: 7.5vw;
+    margin-right: 8.5vw;
     width: 20vw;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -223,8 +230,8 @@ a:link, a:visited{
 }
 
 .dashboard-expendes{
-    width: 60vw;
-    margin-left: 7vw;
+    width: 62vw;
+    margin-left: 2vw;
 }
 
 .dashboard-sektion-container{
@@ -266,6 +273,7 @@ a:link, a:visited{
 
 .cashflow-title{
     justify-content: flex-start;
+    margin-left: 3vw;
 }
 
 .cashflow-monat{
@@ -288,7 +296,7 @@ a:link, a:visited{
 }
 
 .cashflow-balance-placeholder{
-    padding-top: 10vh;
+  padding-top: 1vh;
 }
 
 .cashflow-oben{
@@ -299,7 +307,7 @@ a:link, a:visited{
 .cashflow-section1{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 5vw;
 }
 
@@ -318,7 +326,7 @@ a:link, a:visited{
 .cashflow-section2{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 5vw;
 }
 
@@ -488,6 +496,9 @@ a:link, a:visited{
     cursor: pointer;
     color: black;
 }
+.portfolio-title{
+    margin-left: 2.5vw;
+}
 
 .portfolio-chart{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -499,12 +510,20 @@ a:link, a:visited{
     padding: 10px;
 }
 
+.calculator-portfolio-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .calculator{
     display: flex;
     flex-direction: column;
     padding-top: 5vh;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 25px;
+    padding: 5vw;
+    max-width: 90vw;
     background-color: white;
 }
 

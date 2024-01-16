@@ -12,7 +12,9 @@ export default function Dashboard() {
 
   return (
     <div>
+      <div className="dashboard-title">
       <h1>Dein Dashboard</h1>
+      </div>
       <div className="dashboard-boxes">
         <div className="dashboard-box-balance">
         <DashBalance />
@@ -20,9 +22,9 @@ export default function Dashboard() {
         <div className="dashboard-box-goal">
         <DashGoal />
         </div>
-        <div className="dashboard-box-portfolio">
+        {/* <div className="dashboard-box-portfolio">
         <DashPortfolio />
-        </div>
+        </div> */}
       </div>
       <div className="dashboard-charts">
         <div className="dashboard-barchart-container">

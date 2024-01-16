@@ -38,7 +38,7 @@ export default function LoginPage() {
         console.log("Login erfolgreich. Benutzer-ID:", data._id);
         setSuccessMsg(true);
         setUser(data._id);
-        navigate("/dashboard");
+        navigate("/cashflow");
 
         const auth = data._id;
         sessionStorage.setItem("userid", auth)

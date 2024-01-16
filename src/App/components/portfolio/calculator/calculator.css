@@ -15,9 +15,18 @@ label, input{
 }
 
 .calculator-inputs input{
-    border-radius: 10px;
+    border-radius: 25px;
     height: 3vh;
 }      
+
+.calculator-inputs label{
+    display: flex;
+    justify-content: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
 .calculator-button{
     display: flex;
@@ -35,9 +44,13 @@ label, input{
 
 .calculator-ergebnis{
     display: flex;
+    background-color: #fde784;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+    margin-top: 2vh;
 }
 
 .calculator-ergebnis p{

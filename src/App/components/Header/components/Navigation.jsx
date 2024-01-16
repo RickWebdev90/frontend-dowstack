@@ -14,7 +14,7 @@ export default function UserNavigation(){
                 <li className="nav-header-item">Sparziele</li>
             </NavLink>
             <NavLink to="/portfolio" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
-                <li className="nav-header-item">Portfolio</li>
+                <li className="nav-header-item">Vermögensrechner</li>
             </NavLink>
             <NavLink to="/usersettings" style={({isActive})=>({color: isActive ? "#6EB636" : "black"})}>
                 <li className="nav-header-item">UserSettings</li>
