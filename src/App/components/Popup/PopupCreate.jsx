@@ -8,7 +8,7 @@ import TitleInput from "../Inputs/TitleInput";
 import updateBalance from "../CRUD/UpdateBalance";
 import { useState, useEffect } from "react";
 
-export default function PopupCreate({ trigger, setTrigger }) {
+export default function PopupCreate({ trigger, setTrigger, usage }) {
   const [type, setType] = useState("false");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
@@ -20,17 +20,55 @@ export default function PopupCreate({ trigger, setTrigger }) {
     // fetchBalance(setUserBalance);
   }, [trigger]);
 
+  const URLRoute = type === "false" ? "out" : "in";
+
+  //amout reformating before saving
+  const amountReformed = amount.replace(",", ".");
+  const amountAsFloat = parseFloat(amountReformed);
+
+  //switch for handling usage of popup
+  let usedHandler
+  let usedRoute
+  let newEntry
+  switch (usage) {
+    case "savingGoals":
+      usedHandler = handleSavings,
+        usedRoute = "/savings"
+        newEntry ={
+          user_id: userId,
+          title: "savings title"
+        }
+      break;
+    case "cashflow":
+      usedHandler = handleCashFlow,
+        usedRoute = URLRoute,
+        newEntry = {
+        user_id: userId,
+        title: title,
+        date: date,
+        amount: amountAsFloat,
+        recurring: recurr,
+      };
+      break;
+    case "assets":
+      usedHandler = handleAssets,
+        usedRoute = "/assets",
+        newEntry={
+          user_id: userId,
+          title: "irgend ein title"
+        }
+      break;
+    default: console.log("no usage ")
+
+  }
+
+  console.log("handle", usedHandler)
+  console.log("route", usedRoute)
   const saveData = async (c) => {
-    const URLRoute = type === "false" ? "out" : "in";
-    const amountReformed = amount.replace(",", ".");
-    const amountAsFloat = parseFloat(amountReformed);
-    const newEntry = {
-      user_id: userId,
-      title: title,
-      date: date,
-      amount: amountAsFloat,
-      recurring: recurr,
-    };
+    console.log("usedRoute in func", usedRoute)
+  
+    
+  
     const configCreate = {
       method: "POST",
       headers: {
@@ -40,7 +78,7 @@ export default function PopupCreate({ trigger, setTrigger }) {
     };
     try {
       const response = await fetch(
-        `https://dowstack.onrender.com/${URLRoute}`,
+        `https://dowstack.onrender.com/${usedRoute}`,
         configCreate
       );
       const data = await response.json();
@@ -52,6 +90,25 @@ export default function PopupCreate({ trigger, setTrigger }) {
     }
     c();
   };
+
+  function handleCashFlow(){
+      saveData(close);
+      updateBalance(userId, type, amount);
+  
+  }
+
+  function handleSavings(){
+    saveData(close)
+    console.log("savings handled")
+  }
+
+  function handleAssets(){
+    saveData(close);
+    console.log("assets handled")
+  }
+
+  console.log("usage", usage)
+  
 
   return (
     <Popup
@@ -77,10 +134,7 @@ export default function PopupCreate({ trigger, setTrigger }) {
                   <RecurrInput recurr={recurr} setRecurr={setRecurr} />
                   <DateInput date={date} setDate={setDate} />
                   <button
-                    onClick={() => {
-                      saveData(close);
-                      updateBalance(userId, type, amount);
-                    }}
+                    onClick={usedHandler}
                   >
                     Speichern
                   </button>

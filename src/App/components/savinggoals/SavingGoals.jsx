@@ -15,7 +15,7 @@ export default function SavingGoals() {
         <SavingGoalsBalance />
       </div>
       <div className="SavingGoals-Add-Button">
-            <PopupCreate setTrigger={setTrigger} trigger={trigger} />
+            <PopupCreate setTrigger={setTrigger} trigger={trigger} usage="savingGoals" />
           </div>
       <div className='SavingGoals-Container-Page'>
         <SavingGoalsEntry />
