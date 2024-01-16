@@ -14,12 +14,11 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
   const [type, setType] = useState("false");
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
-  const [recurr, setRecurr] = useState(false);
+  const [recurr, setRecurr] = useState("false");
   const [date, setDate] = useState("");
   const [value, setValue] = useState("");
   const [balance, setBalance] = useState(""); 
   const [goal, setGoal] = useState(""); 
-  const [start, setStart] = useState("")
   // const [userBalance, setUserBalance] = useState("");
   const userId = sessionStorage.getItem("userid");
   useEffect(() => {
@@ -32,6 +31,7 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
   const amountReformed = amount.replace(",", ".");
   const amountAsFloat = parseFloat(amountReformed);
 
+  console.log("Amount", amountAsFloat)
    //switch for handling usage of popup
    let usedHandler
    let usedRoute
@@ -40,22 +40,24 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
    switch (usage) {
      case "savingGoals":
        usedHandler = handleSavings,
-         usedRoute = "/saving"
+         usedRoute = "savinggoals"
          method = "POST"
          newEntry ={
            user_id: userId,
            title: title,
+           creationDate: date,
            balance: balance,
            goal: goal,
          }
        break;
        case "savingGoalsUpdate":
        usedHandler = handleSavingsUpdate,
-         usedRoute = "/saving"
+         usedRoute = "savinggoals"
          method = "PUT"
          newEntry ={
            user_id: userId,
            title: title,
+           creationDate: date,
            balance: balance,
            goal: goal,
          }
@@ -67,7 +69,7 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
          newEntry = {
          user_id: userId,
          title: title,
-         date: date,
+         creationDate: date,
          amount: amountAsFloat,
          recurring: recurr,
        };
@@ -79,16 +81,18 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
          newEntry={
            user_id: userId,
            title: title,
+           creationDate: date,
            value: value,
          }
        break;
-       case "assets":
+       case "assetsUpdate":
        usedHandler = handleAssetsUpdate,
          usedRoute = "/assets",
          method = "PUT"
          newEntry={
            user_id: userId,
            title: title,
+           creationDate: date,
            value: value,
          }
        break;
@@ -108,6 +112,7 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
       },
       body: JSON.stringify(newEntry),
     };
+    console.log(`https://dowstack.onrender.com/${usedRoute}`, configCreate)
     try {
       const response = await fetch(
         `https://dowstack.onrender.com/${usedRoute}`,
@@ -130,7 +135,6 @@ export default function PopupCreate({ trigger, setTrigger, usage }) {
 
 function handleSavings(){
   saveData(close)
-  updateBalance(userId, type, amount);
   console.log("savings handled")
 }
 
@@ -176,12 +180,19 @@ const custom ={
               </div>
               <div className="cashflow-popup-inputs">
                 <form onSubmit={(e) => e.preventDefault()}>
+
                  {usage === "cashflow" ? <TypeInput type={type} setType={setType} /> : null}
+
                   {usage === "savingGoalsUpdate"? null: <TitleInput title={title} setTitle={setTitle} />}
-                  {usage === "savingGoals"? <StartInput start={start} setStart={setStart} /> : <CurrencyInput amount={amount} setAmount={setAmount} />}
+
+                  {usage === "savingGoals"? <StartInput start={balance} setStart={setBalance} /> : <CurrencyInput amount={amount} setAmount={setAmount} />}
+
                   {usage === "savingGoals"?<GoalInput goal={goal} setGoal={setGoal} /> :null}
+
                   {usage === "cashflow"? <RecurrInput recurr={recurr} setRecurr={setRecurr} /> :null}
-                  {usage === "savingGoals" || "savingGoalsUpdate" ?null : <DateInput date={date} setDate={setDate} />}
+
+                  {usage === "savingGoals" ?null : <DateInput date={date} setDate={setDate} />}
+
                   <button
                     onClick={usedHandler}
                   >

@@ -1,9 +1,15 @@
 import React, {useEffect, useState} from 'react'
+import {format} from "date-fns"
 import { Chart as ChartJS } from "chart.js/auto"; 
 import { Bar } from "react-chartjs-2"; 
 
-export default function BarChartCashflow() {
+const BarChartCashflow = ({
+    date
 
+}) => {
+    const rawDate = date
+    const parsedDate = new Date(rawDate);
+    //const formatDate = format(parsedDate, "MM.yyy"); 
    
   return (
     <div>
@@ -53,4 +59,5 @@ export default function BarChartCashflow() {
         </div>
     </div>
   )
-}
+}; 
+export default BarChartCashflow; 
