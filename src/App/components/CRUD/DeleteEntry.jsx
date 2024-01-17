@@ -1,4 +1,4 @@
-const deleteEntry = async (trigger, setTrigger, id, boolean) => {
+const DeleteEntry = async (trigger, setTrigger, id, boolean) => {
   const deleteRoute = boolean === "true" ? "in" : "out";
   const deleteRequest = {
     _id: id,
@@ -24,4 +24,4 @@ const deleteEntry = async (trigger, setTrigger, id, boolean) => {
     console.log("creating Ticket failed!", err);
   }
 };
-export default deleteEntry;
+export default DeleteEntry;

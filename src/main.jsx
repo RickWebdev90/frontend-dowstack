@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
-import { AppRouter } from './Router/MainRouter.jsx';
+import { MainRouter } from './Router/MainRouter.jsx';
 import './App.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <RouterProvider router={AppRouter} />
+  <RouterProvider router={MainRouter} />
 );

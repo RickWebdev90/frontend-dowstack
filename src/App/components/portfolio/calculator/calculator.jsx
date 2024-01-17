@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import '../Calculator/calculator.css';
+import './calculator.css';
 
 export default function Calculator() {
   const startkapitalRef = useRef();

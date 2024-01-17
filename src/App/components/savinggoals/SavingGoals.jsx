@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SavingGoalsBalance from "./SavingGoalsBalance.jsx";
-import SavingGoalsEntry from "../Goal/index.jsx";
+import SavingGoalsEntry from "../Goal/SavingGoalsEntry.jsx";
 import PopupCreate from "../Popup/PopupCreate.jsx";
 
 export default function SavingGoals() {

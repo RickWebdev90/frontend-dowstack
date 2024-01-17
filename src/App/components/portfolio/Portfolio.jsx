@@ -1,7 +1,7 @@
 import React from 'react'
 import PortfolioBalance from './PortfolioBalance.jsx'
 import AssetsPortfolio from './AssetsPortfolio.jsx'
-import Calculator from './Calculator/Calculator'
+import Calculator from './Calculator/Calculator.jsx'
 import PortfolioChart from './PortfolioChart'
 
 export default function Portfolio() {

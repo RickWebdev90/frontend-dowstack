@@ -5,7 +5,7 @@ import DashGoal from './DashGoal.jsx';
 import DashPortfolio from './DashPortfolio.jsx';
 import BarChartCashflow from './BarChartCashflow.jsx';
 import DognutChartDashboard from './DognutChartDashboard.jsx';
-import ExpenseEntry from '../Expense';
+import ExpenseEntry from '../Expense/ExpenseEntry.jsx';
 import DashboardCalculator from './DashboardCalculator.jsx';
 export default function Dashboard() {
   //const auth = sessionStorage.getItem("userid")

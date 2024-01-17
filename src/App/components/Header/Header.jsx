@@ -1,9 +1,9 @@
-import UserNavigation from "./components/Navigation";
+import UserNavigation from "./Navigation";
 import { NavLink, Link } from "react-router-dom";
 import headerLogo from "../../assets/logo/DowStack_Logo_Color.svg";
 import { useUserContext } from "../../hooks/userContext";
 
-export default function Index() {
+export default function Header() {
   const { user } = useUserContext();
   const auth = sessionStorage.getItem("userid")
 
