@@ -70,7 +70,7 @@ if(expensesList.length>0){
             ]
         }}
         options= {{
-            plugins: {
+          plugins: {
                 legend: {
                     position: "bottom",
                         },

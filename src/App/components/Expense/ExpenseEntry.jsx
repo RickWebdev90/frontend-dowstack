@@ -29,7 +29,7 @@ function ExpenseEntry({ trigger, setTrigger }) {
     fetchData();
   }, [trigger]);
   if (expenseList.length > 0) {
-    const useList=path==="/dashboard"? expenseList?.slice(0, 4) : expenseList
+    const useList=path==="/dashboard"? expenseList?.slice(0, 5) : expenseList
     const listOfExpenses = useList?.map((item) => {
       console.log(item);
       return (
