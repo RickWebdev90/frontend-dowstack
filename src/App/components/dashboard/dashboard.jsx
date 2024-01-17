@@ -1,26 +1,25 @@
-
-import DashBalance from './DashBalance.jsx';
-import "../../../app.css"
-import DashGoal from './DashGoal.jsx';
-import DashPortfolio from './DashPortfolio.jsx';
-import BarChartCashflow from './BarChartCashflow.jsx';
-import DognutChartDashboard from './DognutChartDashboard.jsx';
-import ExpenseEntry from '../Expense/ExpenseEntry.jsx';
-import DashboardCalculator from './DashboardCalculator.jsx';
+import DashBalance from "./DashBalance.jsx";
+import "../../../app.css";
+import DashGoal from "./DashGoal.jsx";
+import DashPortfolio from "./DashPortfolio.jsx";
+import BarChartCashflow from "./BarChartCashflow.jsx";
+import DognutChartDashboard from "./DognutChartDashboard.jsx";
+import ExpenseEntry from "../Expense/ExpenseEntry.jsx";
+import DashboardCalculator from "./DashboardCalculator.jsx";
 export default function Dashboard() {
   //const auth = sessionStorage.getItem("userid")
 
   return (
     <div>
       <div className="dashboard-title">
-      <h1>Dein Dashboard</h1>
+        <h1>Dein Dashboard</h1>
       </div>
       <div className="dashboard-boxes">
         <div className="dashboard-box-balance">
-        <DashBalance />
+          <DashBalance />
         </div>
         <div className="dashboard-box-goal">
-        <DashGoal />
+          <DashGoal />
         </div>
         {/* <div className="dashboard-box-portfolio">
         <DashPortfolio />
@@ -36,10 +35,10 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="dashboard-dognutchart-container">
-          <div className='dashboard-dognutchart-title'>
+          <div className="dashboard-dognutchart-title">
             <h2>Ausgaben</h2>
           </div>
-          <div className='dashboard-dognut'>
+          <div className="dashboard-dognut">
             <DognutChartDashboard />
           </div>
         </div>
@@ -53,7 +52,6 @@ export default function Dashboard() {
         </div>
       </div>
       <div></div>
-
     </div>
   );
 }
