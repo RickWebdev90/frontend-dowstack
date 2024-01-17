@@ -1,816 +1,834 @@
-.font-link{
-    font-family: "Montserrat", sans-serif;
+.font-link {
+  font-family: "Montserrat", sans-serif;
 }
 
 main {
-    min-height: 78vh;
-    z-index: 1;
+  min-height: 78vh;
+  z-index: 1;
 }
 
-span{
-    font-weight: 900;
+span {
+  font-weight: 900;
 }
 
-html, body {
-    margin: 0;
-    padding: 0;
-    top: 0;
-    left: 0;
-    background-color: rgb(229, 226, 226);
+html,
+body {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  background-color: rgb(229, 226, 226);
 }
 
-h1, h2, h3, h4, h5, p, label, button, ul, input {
-    font-family: "Montserrat", sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+label,
+button,
+ul,
+input {
+  font-family: "Montserrat", sans-serif;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-navbar {
-    box-shadow: 0px -2px 5px grey;
-    background-color: white;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    font-family: "Montserrat", sans-serif;
+  box-shadow: 0px -2px 5px grey;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
 }
 
 .nav-footer-links {
-    list-style: none;
-    display: flex;
-    padding-right: 2rem;
-    justify-content: flex-end;
+  list-style: none;
+  display: flex;
+  padding-right: 2rem;
+  justify-content: flex-end;
 }
 
 .nav-footer-item {
-    padding: 1rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .footerLogo {
-    max-width: 100px;
-    padding-left: 12rem;
+  max-width: 100px;
+  padding-left: 12rem;
 }
 
 .header-navbar {
-    box-shadow: 0px 2px 5px grey;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    font-family: "Montserrat", sans-serif;
-
+  box-shadow: 0px 2px 5px grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
 }
 
-.header-navbar button{
-    border-radius: 10px;
-    height: 3rem;
-    width: 6rem;
-    font-size: 1.2rem;
-    background: #267bc6;
-    color: white;
-    border: none;
-    font-family: "Montserrat", sans-serif;
-    margin-right: 2rem;
+.header-navbar button {
+  border-radius: 10px;
+  height: 3rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  background: #267bc6;
+  color: white;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 2rem;
 }
 
-.buttonLink{
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-    height: 3rem;
-    width: 6rem;
-    font-size: 1.2rem;
-    background: #267bc6;
-    color: white;
-    border: none;
-    font-family: "Montserrat", sans-serif;
-    margin-right: 2rem;
-    align-items: center;
-    padding: 3px 8px
+.buttonLink {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  height: 3rem;
+  width: 6rem;
+  font-size: 1.2rem;
+  background: #267bc6;
+  color: white;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  margin-right: 2rem;
+  align-items: center;
+  padding: 3px 8px;
 }
 
-.buttonLink:hover{
-    cursor: pointer;
+.buttonLink:hover {
+  cursor: pointer;
 }
 
-a:link, a:visited{
-    text-decoration: none;
-    color: white;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: white;
 }
 
 .nav-header-links {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    margin-left: 30rem; 
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 30rem;
 }
 
 .nav-header-item {
-    padding: 1rem 1rem;
-    margin-right: 15px;
+  padding: 1rem 1rem;
+  margin-right: 15px;
 }
 
 .headerLogo {
-    max-width: 100px;
-    height: 100px;
-    padding-left: 12rem;
+  max-width: 100px;
+  height: 100px;
+  padding-left: 12rem;
 }
-.app-boxshadow{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.dashboard-boxes{
-    display: flex;
-    justify-content: flex-start;
-    gap: 2vw;
-    margin-bottom: 2vh;
-    margin-left: -1vw;
+.app-boxshadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.dashboard-title{
-    margin-left: 4vw;
+.dashboard-boxes {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2vw;
+  margin-bottom: 2vh;
+  margin-left: -1vw;
 }
 
-.dashboard-box-balance{
-    margin-left: 5vw;
+.dashboard-title {
+  margin-left: 4vw;
 }
 
-.dashboard-balance{
-     
-    background-color: #FCD112;
-    border-radius: 25px;
-    height: 15vh;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+.dashboard-box-balance {
+  margin-left: 5vw;
 }
 
-.dashboard-portfolio{
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 20vw;
-    height: 15vh;
-    background-color: white;
+.dashboard-balance {
+  background-color: #fcd112;
+  border-radius: 25px;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
 }
 
-.dashboard-portfolio-wert{
-    border-radius: 25px;
-    background-color: #FCD112;
-    display: flex;
-    width: 10vw;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 2vh;
+.dashboard-portfolio {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 15vh;
+  background-color: white;
 }
 
-.dashboard-goal{
-    background-color:#6EB636;
-    color: white;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    width: 58vw;
-    height: 15vh;
+.dashboard-portfolio-wert {
+  border-radius: 25px;
+  background-color: #fcd112;
+  display: flex;
+  width: 10vw;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
 }
 
-.goal-header{
-    display: flex;
-    justify-content: flex-start;
+.dashboard-goal {
+  background-color: #6eb636;
+  color: white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 58vw;
+  height: auto;
+  /* border: 2px solid rgb(133, 98, 98); */
+}
+.goaltitle {
+  padding-right: 16px;
+}
+.goal-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.goalheader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
 }
 
-.goal-placeholder{
-    height: 5vh;
+.goal-container {
+  justify-content: center;
+  justify-items: center;
+  width: 40vw;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.goal-container{
-    justify-content: center;
-    justify-items: center;
-   width: 40vw;
-   padding-left: 15px;
-   padding-right: 15px;
+.dashboard-charts {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  gap: 3.5vw;
 }
 
-.dashboard-charts{
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    gap: 3.5vw
+.dashboard-barchart-container {
+  display: flex;
+  width: 60vw;
+  margin-left: 3.5vw;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  padding: 1rem;
+  background-color: white;
 }
 
-.dashboard-barchart-container{
-    display: flex;
-    width: 60vw;
-    margin-left: 3.5vw;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 25px;
-    padding: 1rem;
-    background-color: white;
+.dashboard-dognutchart-container {
+  display: flex;
+  margin-right: 8.5vw;
+  width: 20vw;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  padding: 1rem;
+  background-color: white;
 }
 
-.dashboard-dognutchart-container{
-    display: flex;
-    margin-right: 8.5vw;
-    width: 20vw;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 25px;
-    padding: 1rem;
-    background-color: white;
+.dashboard-calculator {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  margin-top: 3.5vh;
+  width: 21.5vw;
+  height: 50vh;
+  font-size: large;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  margin-right: 7vw;
 }
 
-.dashboard-calculator{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    margin-top: 3.5vh;
-    width: 21.5vw;
-    height: 50vh;
-    font-size: large;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white;
-    margin-right: 7vw;
+.dashboard-expendes {
+  width: 62vw;
+  margin-left: 2vw;
 }
 
-.dashboard-expendes{
-    width: 62vw;
-    margin-left: 2vw;
+.dashboard-sektion-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  padding-bottom: 20px;
 }
 
-.dashboard-sektion-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: auto;
-    padding-bottom: 20px;
+.cashflow-header {
+  display: flex;
+  justify-content: space-between;
 }
 
-.cashflow-header{
-    display: flex;
-    justify-content: space-between;
+.cashflow-monatsauswahl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
-.cashflow-monatsauswahl{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    gap: 10px; 
-    font-family: "Montserrat", sans-serif;
+.cashflow-monatsauswahl button {
+  border-radius: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-top: 15px;
+  font-size: 3rem;
+  text-align: center;
+  background-color: white;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.cashflow-monatsauswahl button{
-    border-radius: 10px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding-top: 15px;
-    font-size: 3rem;
-    text-align: center;
-    background-color: white;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.cashflow-title {
+  justify-content: flex-start;
+  margin-left: 3vw;
 }
 
-.cashflow-title{
-    justify-content: flex-start;
-    margin-left: 3vw;
+.cashflow-monat {
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.cashflow-monat{
-    border-radius: 10px;
-    height: 40px;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.cashflow-balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  padding-top: 10vh;
 }
 
-.cashflow-balance{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    justify-items: flex-start;
-    padding-top: 10vh;
-}
-
-.cashflow-balance-placeholder{
+.cashflow-balance-placeholder {
   padding-top: 1vh;
 }
 
-.cashflow-oben{
-    display: flex;
-    justify-content: space-around;
+.cashflow-oben {
+  display: flex;
+  justify-content: space-around;
 }
 
-.cashflow-section1{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 5vw;
+.cashflow-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
 }
 
-.cashflow-income-container{
-    width: 65vw;
-    margin-left: 3vw;
+.cashflow-income-container {
+  width: 65vw;
+  margin-left: 3vw;
 }
 
-.cashflow-balance-add-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 30vw;
+.cashflow-balance-add-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
 }
 
-.cashflow-section2{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 5vw;
+.cashflow-section2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 5vw;
 }
 
-.cashflow-Expenses{
-    width: 65vw;
-    margin-left: 3vw;
-    padding-bottom: 3vh;
+.cashflow-Expenses {
+  width: 65vw;
+  margin-left: 3vw;
+  padding-bottom: 3vh;
 }
 
-.cashflow-placholder-expenses{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 30vw;
+.cashflow-placholder-expenses {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30vw;
 }
 
-.expense-container{
-    display: flex;
-    justify-content: flex-start
+.expense-container {
+  display: flex;
+  justify-content: flex-start;
 }
 
-
-.portfolio-header{
-    display: flex;
-    justify-content: space-evenly;
-    height: 35vh;
-    padding-bottom: 5vh;
+.portfolio-header {
+  display: flex;
+  justify-content: space-evenly;
+  height: 35vh;
+  padding-bottom: 5vh;
 }
 
-.SavingGoals-Page{
-    display: flex;
-    flex-direction: column;
-    min-height: 82vh;
+.SavingGoals-Page {
+  display: flex;
+  flex-direction: column;
+  min-height: 82vh;
 }
 
-.SavingGoals-Balance-Container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
+.SavingGoals-Balance-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
 }
 
-.SavingGoals-Balance{
-    width: 30vw;
-    height: 10vh;
-    background-color: #FCD112;
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.SavingGoals-Balance {
+  width: 30vw;
+  height: 10vh;
+  background-color: #fcd112;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.SavingGoals-Container-Page{
-    display: flex;
-    justify-content: center;
-    width: 95vw;
-    min-height: 30vh;
-    margin-left: 2.5vw;
-    margin-right: 2.5vw; 
-    background-color: white;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.SavingGoals-Container-Page {
+  display: flex;
+  justify-content: center;
+  width: 95vw;
+  min-height: 30vh;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.SavingGoals-Spaltentitel{
-    display: grid;
-    grid-template-columns: repeat(6, 0.75fr);
-    grid-template-rows: repeat(1, 1fr);
-    font-size: x-large;
-    font-weight: 700;
-    padding: 5px;
-    margin-left: 5vw; 
-    font-family: "Montserrat", sans-serif;
+.SavingGoals-Spaltentitel {
+  display: grid;
+  grid-template-columns: repeat(6, 0.75fr);
+  grid-template-rows: repeat(1, 1fr);
+  font-size: x-large;
+  font-weight: 700;
+  padding: 5px;
+  margin-left: 5vw;
+  font-family: "Montserrat", sans-serif;
 }
 
-.SavingGoalEntry{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-column-gap: 15px;
-    width: 85vw;
+.SavingGoalEntry {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 15px;
+  width: 85vw;
 }
 
-.SavingGoals-Titel-Container{
-    display: flex;
-    justify-content: center;
-    height: 15vh;
+.SavingGoals-Titel-Container {
+  display: flex;
+  justify-content: center;
+  height: 15vh;
 }
 
-.SavingGoalTitle{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.SavingGoalTitle {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.SavingGoalCurrentSaving{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.SavingGoalCurrentSaving {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.SavingGoalTarget{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.SavingGoalTarget {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.savinggoal-EntryButton{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: none; 
-    background-color: #6EB636;
-    color: white;
+.savinggoal-EntryButton {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  background-color: #6eb636;
+  color: white;
 }
 
-.SavingGoals-Add-Button{
-    display: flex;
-    justify-content: center;
-    height: 10vh;
+.SavingGoals-Add-Button {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
 }
 
-.savinggoal-EntryButton:hover{
-    cursor: pointer;
-    color: black;
+.savinggoal-EntryButton:hover {
+  cursor: pointer;
+  color: black;
 }
 
-.savinggoal-DeleteButton{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: none;
-    background-color: #FF3F49;
-    color: white;
+.savinggoal-DeleteButton {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  background-color: #ff3f49;
+  color: white;
 }
 
-.savinggoal-DeleteButton:hover{
-    cursor: pointer;
-    color: black;
+.savinggoal-DeleteButton:hover {
+  cursor: pointer;
+  color: black;
 }
-.portfolio-title{
-    margin-left: 2.5vw;
-}
-
-.portfolio-chart{
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 25px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    padding: 10px;
+.portfolio-title {
+  margin-left: 2.5vw;
 }
 
-.calculator-portfolio-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.portfolio-chart {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 10px;
 }
 
-.calculator{
-    display: flex;
-    flex-direction: column;
-    padding-top: 5vh;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 25px;
-    padding: 5vw;
-    max-width: 90vw;
-    background-color: white;
+.calculator-portfolio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ExpenseEntry{
-    display: grid;
-    grid-template-columns: repeat(5, 1.25fr);
-    grid-template-rows: repeat(3, 0.5fr);
-    grid-column-gap: 15px;
+.calculator {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5vh;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  padding: 5vw;
+  max-width: 90vw;
+  background-color: white;
 }
 
-.ExpenseTitle{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.ExpenseEntry {
+  display: grid;
+  grid-template-columns: repeat(5, 1.25fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 15px;
 }
 
-.ExpenseAmount{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.ExpenseTitle {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.ExpenseStatus{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.ExpenseAmount {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.ExpenseDate{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.ExpenseStatus {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.ExpenseButton{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: none; 
-    background-color: #FF3F49;
-    color: white;
+.ExpenseDate {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.ExpenseButton:hover{
-    cursor: pointer;
-    color: black;
+.ExpenseButton {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  background-color: #ff3f49;
+  color: white;
 }
 
-.Expense-Cashflow-Container{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 25px;
-    background-color: white;
-    margin-top: 2rem;
-    padding-right: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.ExpenseButton:hover {
+  cursor: pointer;
+  color: black;
 }
 
-.IncomeEntry{
-    display: grid;
-    grid-template-columns: repeat(5, 1.25fr);
-    grid-template-rows: repeat(3, 0.5fr);
-    grid-column-gap: 20px;
-    
+.Expense-Cashflow-Container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 2rem;
+  padding-right: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.IncomeTitle{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.IncomeEntry {
+  display: grid;
+  grid-template-columns: repeat(5, 1.25fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 20px;
 }
 
-.IncomeAmount{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.IncomeTitle {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.IncomeStatus{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.IncomeAmount {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.IncomeDate{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: rgb(242, 241, 241);
+.IncomeStatus {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.IncomeButton{
-    font-size: x-large;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-    height: 2rem;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border: none; 
-    background-color: #FF3F49;
-    color: white;
+.IncomeDate {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(242, 241, 241);
 }
 
-.IncomeButton:hover{
-    cursor: pointer;
-    color: black;
+.IncomeButton {
+  font-size: x-large;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  height: 2rem;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  background-color: #ff3f49;
+  color: white;
 }
 
-.Income-Cashflow-Container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 25px;
-    background-color: white;
-    margin-top: 2rem;
-    padding-right: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.IncomeButton:hover {
+  cursor: pointer;
+  color: black;
+}
+
+.Income-Cashflow-Container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px;
+  background-color: white;
+  margin-top: 2rem;
+  padding-right: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .cashflow-modal {
-    display: flex;
-    flex-direction: column;
-  }
-
-.actions{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
-  .cashflow-modal > .close {
-    cursor: pointer;
-    position: absolute;
-    display: block;
-    padding: 2px 5px;
-    line-height: 20px;
-    right: -10px;
-    top: -10px;
-    font-size: 24px;
-    background: #ffffff;
-    border-radius: 50px;
-    border: 1px solid #cfcece;
-  }
-
-  .cashflow-modal-container{
-    display: flex;
-    flex-direction: column;
-    border-radius: 25px; 
-    background-color: white;
-    height: auto; 
-    padding: 20px;
-    width: 80vw;
-    border: 2px solid black;
-  }
-
-  .cashflow-popup-inputs form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: larger;
-    height: auto;
+.actions {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 2rem;
 }
 
-.cashflow-popup-inputs label{
-    padding: 5px; 
+.cashflow-modal > .close {
+  cursor: pointer;
+  position: absolute;
+  display: block;
+  padding: 2px 5px;
+  line-height: 20px;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  background: #ffffff;
+  border-radius: 50px;
+  border: 1px solid #cfcece;
 }
 
-.input-wrapper{
-    margin-bottom: 10px;
+.cashflow-modal-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  background-color: white;
+  height: auto;
+  padding: 20px;
+  width: 80vw;
+  border: 2px solid black;
 }
 
-.input-wrapper select{
-    height: 4vh;
-    text-align: center;
-    width: 7vw;
-    border-radius: 25px;
+.cashflow-popup-inputs form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: larger;
+  height: auto;
 }
 
-.cashflow-popup-inputs button{
-    border-radius: 25px;
-    height: 5vh;
-    font-size: large;
-    color: white;
-    background-color: #267bc6;
+.cashflow-popup-inputs label {
+  padding: 5px;
 }
 
-.cashflow-popup-inputs button:hover{
-    cursor: pointer;
-    border-radius: 25px;
-    font-size: large;
-    color: black;
-    background-color: #267bc6;
+.input-wrapper {
+  margin-bottom: 10px;
 }
 
-.cashflow-popup-inputs input{
-    border-radius: 25px;
-    height: 3vh;
-    width: 10vw;
+.input-wrapper select {
+  height: 4vh;
+  text-align: center;
+  width: 7vw;
+  border-radius: 25px;
 }
 
-.cashflow-add-button{
-    background-color: #267bc6;
-    border-radius: 25px;
-    font-size: x-large;
-    color: white;
-    height: 8vh;
-    width: 10vw;
+.cashflow-popup-inputs button {
+  border-radius: 25px;
+  height: 5vh;
+  font-size: large;
+  color: white;
+  background-color: #267bc6;
 }
 
-.cashflow-add-button:hover{
-    cursor: pointer;
-    background-color: #6EB636;
+.cashflow-popup-inputs button:hover {
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: large;
+  color: black;
+  background-color: #267bc6;
 }
 
-.SavingGoalEntry-Dashboard{
-    width: 25vw;
+.cashflow-popup-inputs input {
+  border-radius: 25px;
+  height: 3vh;
+  width: 10vw;
+}
+
+.cashflow-add-button {
+  background-color: #267bc6;
+  border-radius: 25px;
+  font-size: x-large;
+  color: white;
+  height: 8vh;
+  width: 10vw;
+}
+
+.cashflow-add-button:hover {
+  cursor: pointer;
+  background-color: #6eb636;
+}
+
+.SavingGoalEntry-Dashboard {
+  width: 25vw;
 }

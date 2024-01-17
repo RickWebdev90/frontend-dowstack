@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import './calculator.css';
+import React, { useRef, useState, useEffect } from "react";
+import "./calculator.css";
 
 export default function Calculator() {
   const startkapitalRef = useRef();
@@ -7,7 +7,14 @@ export default function Calculator() {
   const zinsRef = useRef();
   const spardauerRef = useRef();
   const [result, setResult] = useState(null);
-
+  const [message, setMessage] = useState(null);
+  useEffect(() => {
+    if (message !== null) {
+      const { calcYears, calcResult } = message;
+      sessionStorage.setItem("calcYears", calcYears);
+      sessionStorage.setItem("calcResult", calcResult);
+    }
+  }, [result]);
   const calculateResult = () => {
     const daten = {
       sparrate: parseFloat(sparrateRef.current.value),
@@ -26,14 +33,23 @@ export default function Calculator() {
       startkapital += startkapital * (zins / 12);
     }
 
-    setResult(startkapital.toLocaleString('de-DE', { style: 'currency', currency: 'EUR', minimumFractionDigits: 2 }));
-
-    const calcYears = spardauerRef.current.value; 
+    setResult(
+      startkapital.toLocaleString("de-DE", {
+        style: "currency",
+        currency: "EUR",
+        minimumFractionDigits: 2,
+      })
+    );
+    const calcYears = spardauerRef.current.value;
     const calcResult = JSON.stringify(result);
-    sessionStorage.setItem("calcYears", calcYears)
-    sessionStorage.setItem("calcResult", calcResult)
-    console.log(calcResult)
-    console.log("result", (result))
+    const calcObject = {
+      calcYears: calcYears,
+      calcResult: calcResult,
+    };
+    setMessage(calcObject);
+
+    console.log(calcResult);
+    console.log("result", result);
   };
 
   return (
@@ -42,10 +58,18 @@ export default function Calculator() {
         <div className="calculator-title">
           <h1>Dein Vermögensrechner (Millionärsrechner)</h1>
         </div>
-        <form className="calculatorformular" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="calculatorformular"
+          onSubmit={(e) => e.preventDefault()}
+        >
           <div className="calculator-inputs">
             <label>Monatliche Sparrate(€):</label>
-            <input type="number" name="sparrate" ref={sparrateRef} placeholder="z. B. 150" />
+            <input
+              type="number"
+              name="sparrate"
+              ref={sparrateRef}
+              placeholder="z. B. 150"
+            />
             <label>Jährlicher Zins(%):</label>
             <input type="number" name="zins" ref={zinsRef} />
             <label>Spardauer (Jahre):</label>
@@ -59,7 +83,14 @@ export default function Calculator() {
           <div className="calculator-ergebnis">
             <h2>Ergebnis: </h2>
             <h2>{result}</h2>
-            {result != null ? <p>Super wenn du so diszipliniert sparst, wirst du ein kleines Vermögen haben!🤑</p> : <p></p>}
+            {result != null ? (
+              <p>
+                Super wenn du so diszipliniert sparst, wirst du ein kleines
+                Vermögen haben!🤑
+              </p>
+            ) : (
+              <p></p>
+            )}
           </div>
         </form>
       </div>
