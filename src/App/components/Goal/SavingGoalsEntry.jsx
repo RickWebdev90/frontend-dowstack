@@ -88,7 +88,7 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
     return (
       <div className="SavingGoals-Container">
 <h1>🏁 Deine aktuellen Sparziele 🏁</h1>
-<ul>Noch keine Ziele 🥺</ul>
+<h2>Noch keine Ziele 🥺</h2>
 </div>
       )
   }

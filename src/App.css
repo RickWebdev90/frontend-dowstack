@@ -414,16 +414,26 @@ a:visited {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.SavingGoals-Container-Page {
-  display: flex;
-  justify-content: center;
-  width: 95vw;
-  min-height: 30vh;
-  margin-left: 2.5vw;
-  margin-right: 2.5vw;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.SavingGoals-Container h2{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sparziele-title{
+    margin-left: 3vw;
+}
+
+.SavingGoals-Container-Page{
+    display: flex;
+    justify-content: center;
+    width: 95vw;
+    min-height: 30vh;
+    margin-left: 2.5vw;
+    margin-right: 2.5vw; 
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .SavingGoals-Spaltentitel {
