@@ -15,8 +15,9 @@ export default function Title() {
           <img src={titelLogo} alt="" />
         </div>
         <div>
-        <h1>In Zeiten mit steigenden Kosten, ist man gut beraten, wenn man einen guten Überblick über seine Finazen hat. <br />
-        Mit Dowstack erlangst du die Kontrolle für deine Finazen endlich wieder zurück. </h1>
+        <h1>In Zeiten mit steigenden Kosten, ist man gut beraten, wenn man einen guten Überblick über seine Finanzen hat. <br />
+        <br />
+        Mit Dowstack erlangst du die Kontrolle über deine Finanzen endlich wieder zurück. </h1>
         </div>
       </div>
     </div>

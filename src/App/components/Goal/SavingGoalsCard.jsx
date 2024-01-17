@@ -49,7 +49,7 @@ const SavingGoalsCard = ({
             <h2 className="goaltitle" style={{ color: "black" }}>
               Dein Sparziel:
             </h2>
-            <p style={{ color: "" }}>🎉{title}🎉</p>
+            <h2 style={{ color: "" }}>🎉{title}🎉</h2>
           </div>
           <div className="goal-container">
             <ProgressBar
