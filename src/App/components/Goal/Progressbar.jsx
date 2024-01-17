@@ -9,13 +9,14 @@ const ProgressBar = ({ balance, goal }) => {
         border: "1px solid black",
         borderRadius: "25px",
         overflow: "hidden",
+        backgroundColor: "white",
       }}
     >
       <div
         style={{
           width: `${percentage}%`,
           height: "3.25vh",
-          backgroundColor: "#4caf50",
+          backgroundColor: "#267bc6",
         }}
       ></div>
     </div>

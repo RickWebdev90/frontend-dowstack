@@ -8,6 +8,7 @@ function isMongoDBObjectId(id) {
 }
 function SavingGoalsEntry({ trigger, setTrigger }) {
   const [savingGoalsList, setSavingGoalsList] = useState([]);
+  const path = window.location.pathname
   useEffect(() => {
     const userId = sessionStorage.getItem("userid");
     const fetchData = async () => {
@@ -26,8 +27,10 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
     };
     fetchData();
   }, [trigger]);
-  if (savingGoalsList.length > 0) {
-    const listOfSavingGoals = savingGoalsList?.map((item) => {
+  if (savingGoalsList.length > 0 && path==="/savinggoals") {
+    const useList=path==="/dashboard"? savingGoalsList?.slice(0) :
+    savingGoalsList
+    const listOfSavingGoals = useList?.map((item) => {
       console.log(item);
       return (
         <div key={item._id}>
@@ -58,13 +61,36 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
         <ul>{listOfSavingGoals}</ul>
       </div>
     );
+  } else if(savingGoalsList.length > 0 && path==="/dashboard" ) {
+    const useList=path==="/dashboard"? savingGoalsList?.slice(0) :
+    savingGoalsList
+    const listOfSavingGoals = useList?.map((item) => {
+      console.log(item);
+      return (
+        <div key={item._id}>
+          <SavingGoalsCard
+            trigger={trigger}
+            setTrigger={setTrigger}
+            _id={item._id}
+            title={item.title}
+            balance={item.balance}
+            goal={item.goal}
+          />
+        </div>
+      );
+    });
+    return (
+      <div>
+      <ul>{listOfSavingGoals}</ul>
+    </div>
+    );
   } else {
     return (
       <div className="SavingGoals-Container">
-        <h1>🏁 Deine aktuellen Sparziele 🏁</h1>
-        <ul>Noch keine Ziele 🥺</ul>
-      </div>
-    );
+<h1>🏁 Deine aktuellen Sparziele 🏁</h1>
+<ul>Noch keine Ziele 🥺</ul>
+</div>
+      )
   }
 }
 export default SavingGoalsEntry;
