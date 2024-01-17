@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import footerLogo from "../../../App/assets/logo/DowStack_Logo_Black.svg"
 import "../../../App.css"
 
-export default function Index() {
+export default function Footer() {
   return (
     <div >
       <nav className="footer-navbar">

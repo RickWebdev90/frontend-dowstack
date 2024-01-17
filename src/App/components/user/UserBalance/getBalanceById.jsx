@@ -1,5 +1,5 @@
 const userId = sessionStorage.getItem("userid");
-const getBalanceById = async () => {
+const GetBalanceById = async () => {
   const config = {
     method: "GET",
     headers: {
@@ -21,4 +21,4 @@ const getBalanceById = async () => {
     console.log("irgendwas stimmt nicht", err);
   }
 };
-export default getBalanceById;
+export default GetBalanceById;

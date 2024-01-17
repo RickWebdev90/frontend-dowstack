@@ -1,8 +1,8 @@
 import MonatsAuswahl from "./MonatsAuswahl.jsx";
-import IncomeEntry from "../Income";
+import IncomeEntry from "../Income/Income.jsx";
 import CashFlowBalance from "./CashFlowBalance.jsx";
-import ExpenseEntry from "../Expense";
-import PopupCreate from "../Popup/PopupCreate";
+import ExpenseEntry from "../Expense/ExpenseEntry.jsx";
+import PopupCreate from "../Popup/PopupCreate.jsx";
 import { useState } from "react";
 
 export default function CashFlow() {

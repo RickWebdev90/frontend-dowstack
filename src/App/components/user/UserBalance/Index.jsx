@@ -1,5 +1,5 @@
 const auth = sessionStorage.getItem("userid");
-const fetchBalance = async (setBalance) => {
+const FetchBalance = async (setBalance) => {
   const config = {
     method: "GET",
     headers: {
@@ -21,4 +21,4 @@ const fetchBalance = async (setBalance) => {
     console.log("irgendwas stimmt nicht", err);
   }
 };
-export default fetchBalance;
+export default FetchBalance;

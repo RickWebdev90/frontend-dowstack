@@ -1,5 +1,5 @@
-import getBalanceById from "../user/UserBalance/getBalanceById";
-const updateBalance = async (userId, boolean, amount) => {
+import getBalanceById from "../user/UserBalance/GetBalanceById";
+const UpdateBalance = async (userId, boolean, amount) => {
   const currentUserBalance = await getBalanceById();
   console.log(
     "CURRENT USER BALANCE:",
@@ -45,4 +45,4 @@ const updateBalance = async (userId, boolean, amount) => {
     console.log("creating Ticket failed!", err);
   }
 };
-export default updateBalance;
+export default UpdateBalance;

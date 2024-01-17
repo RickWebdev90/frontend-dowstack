@@ -1,4 +1,4 @@
-const deleteSavingGoalEntry = async (trigger, setTrigger, id) => {
+const DeleteSavingGoalEntry = async (trigger, setTrigger, id) => {
   const deleteRequest = {
     _id: id,
   };
@@ -22,4 +22,4 @@ const deleteSavingGoalEntry = async (trigger, setTrigger, id) => {
     console.log("creating Ticket failed!", err);
   }
 };
-export default deleteSavingGoalEntry;
+export default DeleteSavingGoalEntry;
