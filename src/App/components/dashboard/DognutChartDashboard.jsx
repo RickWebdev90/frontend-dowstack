@@ -11,26 +11,9 @@ function isMongoDBObjectId(id) {
 
 function DognutChartDashboard() {
     const userId = sessionStorage.getItem("userid");
-    const [incomeList, setIncomeList] = useState([]);
     const [expensesList, setExpensesList] = useState([])
     
 useEffect(() => {
-    const fetchIncomeData = async () => {
-        try {
-            if (isMongoDBObjectId(userId)) {
-              const response = await fetch(
-                `https://dowstack.onrender.com/in/user/${userId}`
-              );
-              const data = await response.json();
-              // console.log("data income", data)
-              // console.log("INCOME DATA 💲", data);
-              data.msg ? setIncomeList([]) : setIncomeList(data);
-              
-            }
-          } catch (err) {
-            console.error("ERROR while fetching Data:", err.message);
-          }
-    };
 
     const fetchExpensesData =  async () => {
         try {
@@ -49,26 +32,29 @@ useEffect(() => {
             console.error("ERROR while fetching Data:", err.message);
           }
     };
-    fetchIncomeData();
     fetchExpensesData(); 
 },[])
 
-const incomeArray = []
 const expensesArray = []
+let recurringValue = 0
+let varibleValue = 0
 
-if(incomeList.length>0 || expensesList.length>0){
-    console.log("incomlist2 dognut", incomeList, expensesList)
+if(expensesList.length>0){
+    console.log("incomlist2 dognut", expensesList)
     //income destruct
-    incomeList.forEach((item=>{
-    incomeArray.push(item.amount)
-    })); 
 
-    expensesList.forEach((item=>{
-    expensesArray.push(item.amount)
+
+
+    expensesList.forEach((item =>{
+      if(item.recurring === false){
+    varibleValue += item.amount
+  }else{
+    recurringValue += item.amount
+  }
     }))
 
 }
-    console.log("array dognut",expensesArray)
+    console.log("array dognut",recurringValue)
   return (
     <div>
     <Doughnut 
@@ -76,7 +62,7 @@ if(incomeList.length>0 || expensesList.length>0){
             labels: ["Fixkosten", "variable Kosten"],
             datasets: [
                 {
-                    data: [875, 650],
+                    data: [recurringValue, varibleValue],
                     backgroundColor: ["#6EB636", "#267BC6"],
                     borderColor: ["#6EB636", "#267BC6"],
                 },
