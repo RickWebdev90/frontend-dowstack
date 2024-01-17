@@ -62,7 +62,7 @@ function SavingGoalsEntry({ trigger, setTrigger }) {
       </div>
     );
   } else if(savingGoalsList.length > 0 && path==="/dashboard" ) {
-    const useList=path==="/dashboard"? savingGoalsList?.slice(0) :
+    const useList=path==="/dashboard"? savingGoalsList?.slice(0, 1) :
     savingGoalsList
     const listOfSavingGoals = useList?.map((item) => {
       console.log(item);
