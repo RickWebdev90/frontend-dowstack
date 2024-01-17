@@ -8,6 +8,7 @@ export default function Calculator() {
   const spardauerRef = useRef();
   const [result, setResult] = useState(null);
   const [message, setMessage] = useState(null);
+
   useEffect(() => {
     if (message !== null) {
       const { calcYears, calcResult } = message;
@@ -15,6 +16,7 @@ export default function Calculator() {
       sessionStorage.setItem("calcResult", calcResult);
     }
   }, [result]);
+
   const calculateResult = () => {
     const daten = {
       sparrate: parseFloat(sparrateRef.current.value),
@@ -32,7 +34,7 @@ export default function Calculator() {
       startkapital += sparrate;
       startkapital += startkapital * (zins / 12);
     }
-
+    console.log("STARTKAPITAL", startkapital);
     setResult(
       startkapital.toLocaleString("de-DE", {
         style: "currency",
@@ -41,15 +43,17 @@ export default function Calculator() {
       })
     );
     const calcYears = spardauerRef.current.value;
-    const calcResult = JSON.stringify(result);
+    const calcResult = JSON.stringify(startkapital);
+
     const calcObject = {
       calcYears: calcYears,
-      calcResult: calcResult,
+      calcResult: result,
     };
     setMessage(calcObject);
+    sessionStorage.setItem("calcResult", result);
 
-    console.log(calcResult);
-    console.log("result", result);
+    console.log("CALCULATOR calcResult:", calcResult);
+    console.log("CALCULATOR result:", result);
   };
 
   return (
