@@ -125,7 +125,7 @@ a:link, a:visited{
 .dashboard-boxes{
     display: flex;
     justify-content: flex-start;
-    gap: 5vw;
+    gap: 2vw;
     margin-bottom: 2vh;
     margin-left: -1vw;
 }
@@ -138,9 +138,6 @@ a:link, a:visited{
     margin-left: 5vw;
 }
 
-.dashboard-box-portfolio{
-    margin-right: 5vw;
-}
 .dashboard-balance{
      
     background-color: #FCD112;
@@ -175,14 +172,32 @@ a:link, a:visited{
 }
 
 .dashboard-goal{
-    background-color: #6EB636;
+    background-color:#6EB636;
+    color: white;
     border-radius: 25px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 30vw;
+    width: 58vw;
     height: 15vh;
+}
+
+.goal-header{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.goal-placeholder{
+    height: 5vh;
+}
+
+.goal-container{
+    justify-content: center;
+    justify-items: center;
+   width: 40vw;
+   padding-left: 15px;
+   padding-right: 15px;
 }
 
 .dashboard-charts{
@@ -794,4 +809,8 @@ a:link, a:visited{
 .cashflow-add-button:hover{
     cursor: pointer;
     background-color: #6EB636;
+}
+
+.SavingGoalEntry-Dashboard{
+    width: 25vw;
 }
